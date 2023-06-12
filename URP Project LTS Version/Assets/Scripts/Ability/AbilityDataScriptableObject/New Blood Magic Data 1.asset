@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ae9eafa1f1ea24581c64d3777b9055, type: 3}
+  m_Name: New Blood Magic Data 1
+  m_EditorClassIdentifier: 
+  firstAbilityDelay: 0.1
+  abilityCooldown: 5
+  abilityDamage: 20
+  abilityName: BloodMagic
+  abilityDescription: "Yetene\u011Fin a\xE7\u0131klanmas\u0131"
+  isAbilityActive: 1
+  abilityLevel: 1
+  abilityExp: 0
+  requiredExp: 100
+  magicCost: 0.1
+  healRate: 1
+  healingTarget: {fileID: 0}
+  _gameObject: {fileID: 0}
+  areaRadius: 10
+  searchedArea:
+  - {fileID: 0}
+  continuousAbilityDuration: 2
+  continuousAbilityRepetitions: 1
+  continuousAbilityEnable: 1
+  healingEnabled: 1
