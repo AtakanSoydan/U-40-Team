@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &441491091942889794
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3178897840831622745, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_Name
+      value: Deneme
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622748, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: ability
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622748, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: bloodMagic
+      value: 
+      objectReference: {fileID: 238661463}
+    - target: {fileID: 3178897840831622748, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: _gameObject
+      value: 
+      objectReference: {fileID: 3043812611491051291}
+    - target: {fileID: 3178897840831622748, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: bloodMagicData
+      value: 
+      objectReference: {fileID: 11400000, guid: c79301020c015c24da4f5bd5712de255, type: 2}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3178897840831622751, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617387123365066851, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_Name
+      value: BloodMagic
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617387123365066851, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101988790355743669, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101988790355743669, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101988790355743669, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296953766061113529, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_Color.a
+      value: 0.23529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296953766061113529, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296953766061113529, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296953766061113529, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6296953766061113529, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3178897840831622750, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+--- !u!1 &3043812611491051291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3178897840831622745, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+  m_PrefabInstance: {fileID: 441491091942889794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &238661463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3043812611491051291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cfab34b492925540921c0c469a4bdc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityLevel: 1
+  abilityExp: 0
+  requiredExp: 100
+  bloodMagicData: {fileID: 11400000, guid: f3902606d849f0d4a917dc7d8c6ffd49, type: 2}
+  _dummyArea: {fileID: 3752615195558437153}
+  _healingTarget: {fileID: 0}
+  healthBar: {fileID: 0}
+  health: {fileID: 0}
+  targetLayerMask: 256
+  _gameObject: {fileID: 3043812611491051291}
+  healthfill: 0
+  normalizehealth: 0
+  healHealth: 0
+  playerHealth: 0
+  tempHealth: 0
+  isActiveted: 1
+--- !u!1 &3752615195558437153 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3617387123365066851, guid: 573bcf4f0453ebb4abff361b282cfff2, type: 3}
+  m_PrefabInstance: {fileID: 441491091942889794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!58 &918080452
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3752615195558437153}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
