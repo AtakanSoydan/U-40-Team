@@ -17,7 +17,7 @@ Takım Unity u-40
 
 ## Product Backlog URL
 
-[Unity Team 40 Trello Backlog Board]([https://miro.com/app/board/uXjVO4kRs2w=/](https://trello.com/b/maImobOO/ouau-40))
+[Unity Team 40 Trello Backlog Board](https://trello.com/b/maImobOO/ouau-40)
 
 ## Ürün Açıklaması
 
