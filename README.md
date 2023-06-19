@@ -57,7 +57,7 @@ Rulers of Chaos, üstünüze bitmek bilmeyen yaratıkları yollarken başlarda h
 - **Sprint içinde tamamlanması tahmin edilen puan**: 100 Puan
 
 
-- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 340 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
+- **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 400 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 100 ile başlaması gerektiğine karar verildi.
 
 
 - **Daily Scrum**: Daily Scrum toplantılarının saati Whatsapp'tan kararlaştırılıp, Discord üzerinden gerçekleştirilmektedir. Anlık görüşme, fikir alışverişleri için WhatsApp kullanılmış, Projeye dair tüm detaylar, kaynaklar, ilham alınan projeler Discord üzerinden paylaşılmıştır. Daily Scrum'a dair konuşmalar ve genel sohbetlerimize dair örnek word dosyası hazırlanmıştır, Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint1Documents/ScrumMasterDailyChart.docx?raw=true)
