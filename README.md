@@ -63,7 +63,7 @@ Rulers of Chaos, üstünüze bitmek bilmeyen yaratıkları yollarken başlarda h
 - **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 1 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint1Documents/DailyScrumMeetingNotesSprint1.docx?raw=true)
 
 - **Sprint board update**: Sprint board screenshotları: 
-![Backlog 1](https://raw.githubusercontent.com/OyunveUygulamaAkademisi/Bootcamp2022Example/main/ProjectManagement/Sprint1Documents/backlog1.png) 
+![Backlog 1](https://raw.githubusercontent.com/AtakanSoydan/U-40-Team/main/ProjectManagement/Sprint1Documents/backlog1.png) 
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
@@ -84,6 +84,6 @@ Alınan kararlar: Kullanıcı temel sayfaları oluşturulmuş, bazıları kodlan
 
 ## Product Backlog URL
 
-[Flutter Team 52 Miro Backlog Board](https://miro.com/app/board/uXjVO4kRs2w=/)
+[Unity Team 40 Trello Backlog Board](https://trello.com/b/maImobOO/ouau-40)
 
 ---
