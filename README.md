@@ -14,7 +14,8 @@ Takım Unity u-40
 ## Ürün İsmi
 
 --Rulers of Chaos--
--[Subject to Change]
+
+[Subject to Change]
 
 ## Product Backlog URL
 
