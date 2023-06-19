@@ -21,28 +21,27 @@ Takım Unity u-40
 
 ## Ürün Açıklaması
 
-Scrap App, daire sakinleri tarafından biriktirilmiş apartman ve sitelere ait kıymetli geri dönüşüm atıklarının, geri dönüştürülebilir atık toplayan firmalar tarafından toplanmasını kolaylaştırır ve apartman yönetimlerinin bir gelir kalemi olarak geri dönüşüm ödemesi almalarını sağlar. Ayrıca hurda ilanı verilebilen bu uygulamada kullanıcılar biriktirdikleri, bakır, demir, çelik, alüminyum, kağıt, cam vb hurdaların satışını ilanlar ile yapabilir. Scrap App, geri dönüştürülebilir atıkların kıymetinine önem verir, apartman ve site gibi, insanların blok halde yaşadığı mekanlarda, onların geri dönüşüm atıklarını topluca biriktirmelerini teşvik eder ve kolaylaştırır. Scrap App kağıt, metal, plastik cam vb ürünlerin geri dönüştürülmesi halinde, insanların kendisi, çevresi ve ülkesi için maddi gelir ve Dünya doğası için sürekli fayda sağlayabileceğini savunur ve geri dönüşüm sayesinde yeniden üretim ve madencilik faaliyetlerinin azaltılabileceğini ve böylece yeniden üretim kaynaklı doğaya olan zararın azaltılması gerektiği fikrini destekler ve yeniden kazanımı hedefler.
+Rulers of Chaos, üstünüze bitmek bilmeyen yaratıkları yollarken başlarda hayatta kalmaya çalıştığınız, ancak zamanla onlara hükmederek tüm arenayı domine ettiğiniz roguelite/shoot'em up/action rpg türlerini harmanlayarak birçok farklı oyundan aldığı mekanikleri tek bir oyunda birleştirir. Kaos'un hükümdarları olmak için çıktığınız bu yolculukta, canavar keserek güçlenin, yeni yetenekler kazanın, silahlarınızı güçlendirin, deneyiminizi kökten değiştirecek olan farklı karakterlerin kilidini açın, farklı kombinasyonlar deneyerek en güçlü stratejinizi oluşturun, bir zamanların ihtişamlı krallığına ne olduğunun ipuçlarını çevrenizde arayın, devasa boss'larla efsanevi savaşlar gerçekleştirin ve gücünüzün tadına varın. Zaman zaman savaş mekaniklerinin ritmine ayak uydurup rahatlıkla canavarları kesecek, bazenleri ise çok zorlu bölümler için tarot kartlarınızı en doğru dizilimlerini düşünürken kendinizi derin stratejilerin içinde bulacaksınız. Diyalog kurmak için sizi bekleyen onlarca NPC ile uzun sohbetlere dalabilirsiniz, size yardımı dokunacak tüyolar verirler ve dünya hakkında birçok bilgiye sahiptirler; ancak bazenleri sadece hayat, canavarlar, yaşam ve ölüme dair genel konulara değinmek isteyebilirler. Yaratıkların ve mermilerin oluşturduğu Kaos'un içinde hayatta kalmaya başarabilirseniz aynı Kaos'u yönetebileceğinizin farkına varacaksınız. Zaman içinde güçlendiğinizi hissedecek, önceki seviyelerdeki düşmanlara tek atmaya başlayacaksınız. Bu güç fantezisinin sonucu hakimiyetin anahtarını elinde tutabilecek tek kişi sizsiniz!
 
 
-- **Uygulama birincil fonksiyonu**: Apartman/site sakinlerinin geri dönüşebilir kıymetli atıkları apartman hizmetlisi tarafından düzenli olarak toplanarak, akıllı geri dönüşüm kutusunda biriktirilir, toplayıcı firma biriken atıklara ilişkin kutu doluluk oranını uygulama üzerinden görür ve satın alma teklifini apartman yönetimine uygulama ile bildirir, apartman yönetiminin teklif onayından sonra, atık satın alma işlemi gerçekleşir.
+- **Oyun birincil fonksiyonu**: Oyuncu hikayeyle ilgili duyduklarından ötürü oyunla ilgili bazı detaylar aklını kurcalar ve oyunun sonunda neler olacağını görmek için farklı karakterle defalarca kez aynı level'ları geçer, ta ki krallığın en güçlü hükümdarı olduğunu fark edene dek.
 
-- **Uygulama ikincil fonksiyonu**: Kullanıcı elindeki geri dönüşebilir kıymetli maddeler için teklif almak üzere Scrap App'e girer ve ilan verir, toplayıcı firma, kullanıcının ilanına ilişkin ağırlık ve madde türü gibi bilgileri kullanıcının ilanında görür ve satın alma teklifini kullanıcıya bildirir, kullanıcının teklif onayından sonra, hurda satın alma işlemi gerçekleşir.
+- **Oyun ikincil fonksiyonu**: Oyuncu arena'dan arena'ya giderken gördüğü tüm yaratıkları keserek yeni yetenekler ve daha gelişmiş silahlar elde ederek güçlenir ve oyunun sonlarına doğru güç fantezisi hissini sonuna kadar yaşar.
 
 ## Ürün Özellikleri
 
-- Doluluk oranı %75'in üzerinde olan apartman akıllı atık kutularının kutu doluluk oranının geri dönüşüm atık toplayıcılarına bildirilmesi.
-- Doluluk oranı %75'in üzerinde olan apartman akıllı atık kutularındaki geri dönüşüm maddelerinin satın alınmasına ilişkin, toplayıcı firmalar tarafından satın alma teklifini apartman yönetimlerine sunabilmesi ve yönetici tarafından teklifin kabul edilmesi.
-- Apartmandan bağımsız olarak biriktirilmiş bireysel geri dönüşüm maddelerinin satın alımı için toplayıcı firmalardan teklif alma ve toplayıcı çağırma hizmeti.
-- Kullanıcı, apartman yönetimi, atık toplayıcı firma ve uygulama şirketi için geliştirilmiş kullanıcı rolleri, özellikleri ve ekranları.
+- Oyuncunun güçlenerek tüm dünyayı avuçlarının içine alması hissini yaşaması.
+- Combat sisteminden ötürü zaman zaman casual, diğer zamanlarda ise daha strateji üzerine oynanabilecek olması.
+- Hikayesiyle oyuncunun ilgisini çekip kendini sorgulamasını sağlamak.
+- Tekrar tekrar dönüp oynanabilecek, replayability'si yüksek bir oyun olmak.
 
 ## Hedef Kitle
 
-- Çevreci gönüllüler
-- Apartman yöneticileri
-- Apartman sakinleri
-- Bina yönetim şirketleri 
-- Geri dönüşüm merkezleri
-- Geri dönüşüm atık toplayıcıları
+- Vampire Survivors ve benzer tarzda oyunları oynamış oyuncular
+- Hikayeye önem vererek gameplay'den ödün vermeyen oyuncular
+- Casual/Hardcore fark etmeksizin pc'de oyun oynayan her oyuncu
+- Güç fantezisi konseptine aşina ve buna haz duyan oyuncular
+- Yaptıklarının bedeli olduğunu hissetmek isteyen oyuncular 
 
 ## Juriye Not
 
