@@ -84,6 +84,6 @@ Alınan kararlar: Kullanıcı temel sayfaları oluşturulmuş, bazıları kodlan
 
 ## Product Backlog URL
 
-[Flutter Team 52 Miro Backlog Board](https://miro.com/app/board/uXjVO4kRs2w=/)
+[Unity Team 40 Trello Backlog Board](https://trello.com/b/maImobOO/ouau-40)
 
 ---
