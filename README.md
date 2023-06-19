@@ -45,11 +45,6 @@ Rulers of Chaos, üstünüze bitmek bilmeyen yaratıkları yollarken başlarda h
 - Güç fantezisi konseptine aşina ve buna haz duyan oyuncular
 - Yaptıklarının bedeli olduğunu hissetmek isteyen oyuncular 
 
-## Juriye Not
-
-İlan formu veritabanına başarılı şekilde veri göndermesine rağmen, tecrübe yetersizliği ve zaman eksikliği sebebiyle ilanlar listesi ve teklif formları veritabanıyla ilişkilendirilememiştir.
-
-
 ---
 
 # Sprint 1
