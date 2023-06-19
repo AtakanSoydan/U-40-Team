@@ -72,12 +72,12 @@ Rulers of Chaos, üstünüze bitmek bilmeyen yaratıkları yollarken başlarda h
   ![Screenshot 3](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint1Documents/product3.png)
   ![Screenshot 4](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint1Documents/product4.gif)
 - **Sprint Review**: 
-Alınan kararlar: Kullanıcı temel sayfaları oluşturulmuş, bazıları kodlanmış, arduino kurulumu ve firebase'e bağlanması sağlanmış, uygulama için veritabanı olarak firebase servisleri aktif edilmiş ve eksiklikler değerlendirilmiştir. Sprint Review katılımcıları: Mustafa Aksoy
+Alınan kararlar: Farklı oyun fikirleri konuşulup sonunda hangisi yapılacağı karar verilmiştir. Oyunun ihtiyacı olan tüm sistemler, mekanikler, görsellikler araştırılıp nelerin yapılıp nelerin yapılamayacağı ve bunların elimizdeki süreyle örtüşüp örtüşmediği konuşulup yol izlenmiştir. Oyunun temel mekanikleri kodlanmış, ortak GitHub projesi açılarak beraber geliştirilmeye devam edilmektedir. Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
 - **Sprint Retrospective:**
-  - Roller ile ilgili düzenleme yapılmış, scrum master değişmiştir.
-  - Takım içindeki görev dağılımıyla ilgili düzenleme yapılması kararı alınmıştır.
-  - Takım üyelerinin gelecek sprintlerde aktif olması gerektiğine vurgu yapılmıştır.
+  - Roller kararlaştırılıp Product Owner, Scrum Master atamaları yapılmıştır.
+  - Görevlerin belirlenmesi ve her birinin takım üyelerine atanması için toplantılar yapılmalıdır.
+  - Final/Proje ödevlerinin sonuyla diğer sprint'lerdeki aktifliğin artacağı konuşulmuştur.
  
 
 
