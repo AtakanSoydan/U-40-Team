@@ -70,6 +70,7 @@ Rulers of Chaos, üstünüze bitmek bilmeyen yaratıkları yollarken başlarda h
   ![Screenshot 1](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint1Documents/product1.png)
   ![Screenshot 2](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint1Documents/product2.png)
   ![Screenshot 3](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint1Documents/product3.png)
+  ![Screenshot 4](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint1Documents/product4.gif)
 - **Sprint Review**: 
 Alınan kararlar: Kullanıcı temel sayfaları oluşturulmuş, bazıları kodlanmış, arduino kurulumu ve firebase'e bağlanması sağlanmış, uygulama için veritabanı olarak firebase servisleri aktif edilmiş ve eksiklikler değerlendirilmiştir. Sprint Review katılımcıları: Mustafa Aksoy
 
