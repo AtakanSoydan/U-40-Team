@@ -167,75 +167,6 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
 
         }
 
-
-        /* iþe yarýyor kameraya en yakýn noktayý özel olarak arar
-        ray = activeCamera.ScreenPointToRay(Input.mousePosition);
-
-        Debug.Log($"ray: {ray}");
-        int results = Physics.RaycastNonAlloc(ray, hitInfo, 800f, groundLayer);
-        float smallestDistance = 900;
-        int tempIndex = 0;
-        for (int i = 0; i < results; i++)
-        {
-
-            if (smallestDistance > hitInfo[i].distance)
-            {
-                smallestDistance = hitInfo[i].distance;
-                tempIndex = i;
-            }
-        }
-        Debug.Log($"hitpoint: {hitInfo[tempIndex].point}");
-        //Debug.Log($"deneme: {denemeArea.position}");
-        if(hitInfo !=null) denPos = hitInfo[tempIndex].point;
-        //denemeArea.transform.position = Vector3.Lerp(denemeArea.transform.position, denPos, Time.deltaTime * 100);
-        denemeArea.transform.position = denPos;
-        */
-
-        /* iþe yarýyor
-        ray = activeCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hitInfo2, maxDistance: 300f, groundLayer))
-        {
-            denemeArea.transform.position = hitInfo2.point;
-
-        }
-        */
-
-
-        /* hatalý da olsa oldu
-        ray = activeCamera.ScreenPointToRay(Input.mousePosition);
-        
-        Debug.Log($"ray: {ray}");
-        int results = Physics.RaycastNonAlloc(ray, hitInfo, 300f, groundLayer);
-        float smallestDistance=400;
-        int tempIndex=0;
-        for (int i = 0; i < results; i++)
-        {
-
-            if (smallestDistance> hitInfo[i].distance)
-            {
-                smallestDistance = hitInfo[i].distance;
-                tempIndex= i;
-            }
-        }
-        Debug.Log($"hitpoint: {hitInfo[tempIndex].point}");
-        //Debug.Log($"deneme: {denemeArea.position}");
-        denemeArea.transform.position = hitInfo[tempIndex].point;
-        */
-        /*
-        if (Physics.Raycast(ray, out hitInfo, maxDistance: 300f, groundLayer))
-        {
-            denemeArea.position = hitInfo.point;
-            
-        }
-        */
-        /*
-        hitInfo = Physics.RaycastAll(ray, 300f, groundLayer);
-        foreach (var item in hitInfo)
-        {
-            item
-        }
-        */
-        //denemeArea.position = Input.mousePosition;
     }
 
 
@@ -336,21 +267,6 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
                         enemyHealthBar.Damage(a);
                         enemyHealthBar.healthText.text = enemyHealthBar.BarValueAsIntegerDisplay(enemyHealthBar.healthbar);
                     }
-                    /*
-                    SearchArea(bloodMagicData.AreaRadius, bloodMagicData._gameObject, bloodMagicData.SearchedArea, bloodMagicData.LayerMasktoSearch);
-                    foreach (Collider enemy in bloodMagicData.SearchedArea)
-                    {
-                        Debug.Log("çalýþýyor: " + enemy.name);
-                        enemyCharacter = enemy.GetComponent<ABaseCharacter>();
-                        enemyHealthBar = enemy.GetComponentInChildren<EnemyHealthBar>();
-                        float a = CalculateDamage(AttackPower, abilityDamage, bloodMagicData.abilityDamageRatio, enemyCharacter.Armor, criticRatio, Level, enemyCharacter.Level);
-                        Debug.Log(a);
-                        enemyHealthBar.Damage(a);
-                        enemyHealthBar.healthText.text = enemyHealthBar.BarValueAsIntegerDisplay(enemyHealthBar.healthbar);
-                        //enemy.gameObject.GetComponentInChildren<EnemyHealth>()?.TakeDamage(abilityDamage);
-                        //yield return StartCoroutine(Healingg(abilityDamage, healthBar.gameObject, bloodMagicData.healRate));
-
-                    }*/
                     tempContinuousAbilityRepetitions--;
                     yield return new WaitForSeconds(ContinuousAbilityDuration);
 

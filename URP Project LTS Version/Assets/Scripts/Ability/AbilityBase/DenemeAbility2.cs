@@ -124,21 +124,6 @@ public class DenemeAbility2 : AMagicAbility, IAreaAbilityy, IContinousAbilityy, 
                         enemyHealthBar.Damage(a);
                         enemyHealthBar.healthText.text = enemyHealthBar.BarValueAsIntegerDisplay(enemyHealthBar.healthbar);
                     }
-                    /*
-                    SearchArea(bloodMagicData.AreaRadius, bloodMagicData._gameObject, bloodMagicData.SearchedArea, bloodMagicData.LayerMasktoSearch);
-                    foreach (Collider enemy in bloodMagicData.SearchedArea)
-                    {
-                        Debug.Log("çalýþýyor: " + enemy.name);
-                        enemyCharacter = enemy.GetComponent<ABaseCharacter>();
-                        enemyHealthBar = enemy.GetComponentInChildren<EnemyHealthBar>();
-                        float a = CalculateDamage(AttackPower, abilityDamage, bloodMagicData.abilityDamageRatio, enemyCharacter.Armor, criticRatio, Level, enemyCharacter.Level);
-                        Debug.Log(a);
-                        enemyHealthBar.Damage(a);
-                        enemyHealthBar.healthText.text = enemyHealthBar.BarValueAsIntegerDisplay(enemyHealthBar.healthbar);
-                        //enemy.gameObject.GetComponentInChildren<EnemyHealth>()?.TakeDamage(abilityDamage);
-                        //yield return StartCoroutine(Healingg(abilityDamage, healthBar.gameObject, bloodMagicData.healRate));
-
-                    }*/
                     tempContinuousAbilityRepetitions--;
                     yield return new WaitForSeconds(ContinuousAbilityDuration);
 

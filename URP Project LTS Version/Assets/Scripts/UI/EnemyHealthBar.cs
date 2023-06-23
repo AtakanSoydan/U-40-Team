@@ -14,9 +14,6 @@ public class EnemyHealthBar : ABaseHealthBar
     // Start is called before the first frame update
     void Start()
     {
-        //currentHealth = GetComponentInParent<ABaseCharacter>();
-        //healthbar.maxValue = characterMaxHealth.maxHealth;
-        //healthbar.value = characterHealth.currentHealth;
         SetMaxHealth(characterMaxHealth.maxHealth, healthbar);
         SetHealth(characterHealth.currentHealth, healthbar);
         healthText.text = BarValueAsIntegerDisplay(healthbar);
@@ -31,14 +28,9 @@ public class EnemyHealthBar : ABaseHealthBar
     }
     private void LateUpdate()
     {
-        //gameObject.transform.LookAt(cameraTransform);
-
-        //gameObject.transform.parent.rotation = cameraTransform.rotation;
         point = gameObject.transform.position - cameraTransform.position;
         quaternion = Quaternion.LookRotation(point);
         gameObject.transform.parent.rotation = quaternion;
 
-
-        //gameObject.transform.parent.LookAt(point);
     }
 }
