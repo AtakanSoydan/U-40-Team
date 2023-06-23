@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class EnemyHealth : HealthBase, IDamage
+public class EnemyHealth : HealthBase, ITakeDamage
 {
     [SerializeField] private HealthBar _healthBar;
 
