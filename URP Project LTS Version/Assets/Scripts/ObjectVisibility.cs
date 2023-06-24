@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class ObjectVisibility : MonoBehaviour
 {
-    public float fadeSpeed, fadeAmount;
+    //public float fadeAmount;
+    //public bool doFade = false;
+
+    private float fadeSpeed = 2;
     private float originalOpacitiy;
     Material[] _materials;
-    public bool doFade = false;
-
+    
     private void Awake()
     {
         _materials = GetComponent<Renderer>().materials;
-        Debug.Log(_materials);
 
         foreach (Material material in _materials)
         {
@@ -20,28 +21,20 @@ public class ObjectVisibility : MonoBehaviour
         }
     }
 
-
     private void Update()
     {
-        if (doFade)
-        {
-            FadeNow();
-        }
-        else
-        {
-            ResetFade();
-        }
+        ResetFade();
     }
 
-    private void FadeNow()
-    {
-        foreach (Material material in _materials)
-        {
-            Color currenColor = material.color;
-            Color smoothColor = new Color(currenColor.r, currenColor.g, currenColor.b, Mathf.Lerp(currenColor.a, fadeAmount, fadeSpeed * Time.deltaTime));
-            material.color = smoothColor;
-        }
-    }
+    //private void FadeNow()
+    //{
+    //    foreach (Material material in _materials)
+    //    {
+    //        Color currenColor = material.color;
+    //        Color smoothColor = new Color(currenColor.r, currenColor.g, currenColor.b, Mathf.Lerp(currenColor.a, fadeAmount, fadeSpeed * Time.deltaTime));
+    //        material.color = smoothColor;
+    //    }
+    //}
 
     private void ResetFade()
     {
