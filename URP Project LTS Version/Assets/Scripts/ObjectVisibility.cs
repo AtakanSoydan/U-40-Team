@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectVisibility : MonoBehaviour
@@ -7,16 +9,17 @@ public class ObjectVisibility : MonoBehaviour
     Material[] _materials;
     public bool doFade = false;
 
-    private void Start()
+    private void Awake()
     {
         _materials = GetComponent<Renderer>().materials;
+        Debug.Log(_materials);
 
         foreach (Material material in _materials)
         {
             originalOpacitiy = material.color.a;
         }
-      
     }
+
 
     private void Update()
     {

@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 349189245}
   - component: {fileID: 349189248}
   - component: {fileID: 349189247}
-  - component: {fileID: 349189250}
   - component: {fileID: 349189246}
   - component: {fileID: 349189249}
   m_Layer: 0
@@ -281,21 +280,6 @@ MonoBehaviour:
   fadeSpeed: 2
   fadeAmount: 0.1
   doFade: 0
---- !u!114 &349189250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 349189244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dbdd551b70ed5a44a9fa87bb78725ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeSpeed: 2
-  fadeAmount: 0.1
-  doFade: 0
 --- !u!1 &878132648
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,8 +291,8 @@ GameObject:
   - component: {fileID: 878132649}
   - component: {fileID: 878132652}
   - component: {fileID: 878132651}
-  - component: {fileID: 878132653}
   - component: {fileID: 878132650}
+  - component: {fileID: 878132653}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -615,7 +599,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: -20
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 1
   orthographic size: 10
@@ -716,6 +700,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1266812303}
+  - component: {fileID: 1266812304}
   m_Layer: 0
   m_Name: obje scirpti
   m_TagString: Untagged
@@ -738,6 +723,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1266812304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266812302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b1bb36299cde94a833018c28a0154b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1252758250974622424}
+  fadeSpeed: 2
+  fadeAmount: 0.5
 --- !u!1 &1306210995
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,8 +749,8 @@ GameObject:
   - component: {fileID: 1306210996}
   - component: {fileID: 1306210999}
   - component: {fileID: 1306210998}
-  - component: {fileID: 1306211000}
   - component: {fileID: 1306210997}
+  - component: {fileID: 1306211000}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
