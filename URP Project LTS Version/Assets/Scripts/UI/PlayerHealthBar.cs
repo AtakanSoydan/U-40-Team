@@ -84,7 +84,7 @@ public class PlayerHealthBar : ABaseHealthBar
         {
             autoHealTimer -= Time.deltaTime * autoHealTimerMultiplier;
             autoHealTimerSlider.value = autoHealTimer;
-            autoHealTimerText.text = Mathf.CeilToInt(autoHealTimer % autoHealTimerDivede).ToString();
+            autoHealTimerText.text = BarValueAsIntegerDisplay(autoHealTimer % autoHealTimerDivede);
             //Debug.Log(autoHealTimer % autoHealTimerDivede);
         }
         else if (autoHealTimer <= 0 && !takedDamage)

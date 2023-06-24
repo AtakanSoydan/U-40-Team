@@ -10,7 +10,7 @@ public class EnemyHealthBar : ABaseHealthBar
     public TextMeshProUGUI levelText;
     public Transform cameraTransform;
     public Quaternion quaternion;
-    Vector3 point;
+    Vector3 barLookDirection;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +28,8 @@ public class EnemyHealthBar : ABaseHealthBar
     }
     private void LateUpdate()
     {
-        point = gameObject.transform.position - cameraTransform.position;
-        quaternion = Quaternion.LookRotation(point);
+        barLookDirection = gameObject.transform.position - cameraTransform.position;
+        quaternion = Quaternion.LookRotation(barLookDirection);
         gameObject.transform.parent.rotation = quaternion;
 
     }
