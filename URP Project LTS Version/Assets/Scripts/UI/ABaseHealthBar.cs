@@ -107,6 +107,7 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
     }
 
     //TODO bunu kaldýrabilirim  Abasecharacter'da bir tane daha var
+
     /// <summary>
     ///     Ýyileþme miktarýný hesaplamak için kullanýlan metottur.
     /// </summary>
