@@ -7,15 +7,28 @@ public class PlayerController : MonoBehaviour
 {
     private InputHandler _input;
 
+    public Animator anim;
+
     [SerializeField] private float moveSpeed;
     [SerializeField] private float rotateSpeed;
     [SerializeField] private bool rotateTowardsMouse;
 
     [SerializeField] private Camera _camera;
 
+    Transform cam;
+    Vector3 camForward;
+    Vector3 move;
+    Vector3 moveInput;
+
+    float forwardAmount;
+    float turnAmount;
+
     private void Awake()
     {
         _input = GetComponent<InputHandler>();
+        SetupAnimator();
+
+        cam = Camera.main.transform;
     }
 
     void Update()
@@ -27,6 +40,51 @@ public class PlayerController : MonoBehaviour
             RotateTowardMovementVector(movementVector);
         else
             rotateTowardsMouseVector();
+    }
+
+    private void FixedUpdate()
+    {
+        if(cam != null)
+        {
+            camForward = Vector3.Scale(cam.up, new Vector3(1, 0, 1).normalized);
+            move = _input.v * camForward + _input.h * cam.right;
+        }
+        else
+        {
+            move = _input.v * Vector3.forward + _input.h * Vector3.right;
+        }
+
+        if (move.magnitude > 1)
+        {
+            move.Normalize();
+        }
+        Move(move);
+    }
+
+    void Move(Vector3 move)
+    { 
+        if(move.magnitude < 1)
+        {
+            move.Normalize();
+        }
+
+        this.moveInput = move;
+
+        ConvertMoveInput();
+        UpdateAnimator();
+    }
+
+    void ConvertMoveInput()
+    {
+        Vector3 localMove = transform.InverseTransformDirection(moveInput);
+        turnAmount = localMove.x;
+
+        forwardAmount = localMove.z;
+    }
+    void UpdateAnimator()
+    {
+        anim.SetFloat("vertical", forwardAmount, 0.1f, Time.deltaTime);
+        anim.SetFloat("horizontal", turnAmount, 0.1f, Time.deltaTime);
     }
 
     private void rotateTowardsMouseVector()
@@ -58,6 +116,22 @@ public class PlayerController : MonoBehaviour
         var targetPosition = transform.position + targetVector * speed;
         targetVector = Vector3.Normalize(targetVector);
         transform.position = targetPosition;
+
         return targetVector;
+    }
+
+    void SetupAnimator()
+    {
+        anim = GetComponent<Animator>();
+
+        foreach (var childAnimator in GetComponentsInChildren<Animator>())
+        {
+            if(childAnimator != anim)
+            {
+                anim.avatar = childAnimator.avatar;
+                Destroy(childAnimator);
+                break;
+            }
+        }
     }
 }
