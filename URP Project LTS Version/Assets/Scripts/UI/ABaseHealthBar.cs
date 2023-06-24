@@ -62,7 +62,7 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
     /// Hasarýn uygulandýðý sýnýf
     /// </summary>
     /// <param name="amount">Hesaplanmýþ hasar miktarý. Bu hasar miktarý kadar can azalacak</param>
-    public void Damage(float amount)
+    public void DamageApply(float amount)
     {
         //Debug.Log("damage");
         healthbar.value -= amount;

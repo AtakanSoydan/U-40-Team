@@ -117,7 +117,7 @@ public class DenemeAbility2 : AMagicAbility, IAreaAbilityy, IContinousAbilityy, 
                     Debug.Log(a);
                     Debug.Log(enemyCharacter.Level);
                     Debug.Log((1 + (player.Level / 200) - (enemyCharacter.Level / 200)));
-                    enemyHealthBar.Damage(a);
+                    enemyHealthBar.DamageApply(a);
                     enemyHealthBar.healthText.text = enemyHealthBar.BarValueAsIntegerDisplay(enemyHealthBar.healthbar);
                 }
                 tempContinuousAbilityRepetitions--;
