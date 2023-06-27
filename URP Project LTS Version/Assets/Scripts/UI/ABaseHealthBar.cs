@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Profiling;
 using UnityEngine.UI;
 
 public abstract class ABaseHealthBar : MonoBehaviour, IDamage
@@ -64,6 +66,9 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
     /// <param name="amount">Hesaplanmýþ hasar miktarý. Bu hasar miktarý kadar can azalacak</param>
     public void DamageApply(float amount)
     {
+
+
+
         //Debug.Log("damage");
         healthbar.value -= amount;
         takedDamage = true;
@@ -71,13 +76,16 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
         {
             health = 0;
         }
-
+        
         if (OnDamaged != null)
         {
             OnDamaged(this, EventArgs.Empty);
 
         }
+
         takedDamage = false;
+
+
     }
     /*
     public void Heal(float amount)
@@ -106,6 +114,23 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
         return Mathf.CeilToInt(value).ToString();
     }
 
+    public int UpdateCurrentHealthWithBarValue(Slider healthbar)
+    {
+        return Mathf.CeilToInt(healthbar.value);
+    }
+
+    public int UpdateCurrentHealthWithBarValue(float healthbar)
+    {
+        return Mathf.CeilToInt(healthbar);
+    }
+
+    public int BarValueAsIntegerDisplay(Slider healthbar, TextMeshProUGUI healthText)
+    {
+        int a = Mathf.CeilToInt(healthbar.value);
+        healthText.SetText(a.ToString());
+        return a;
+    }
+
     //TODO bunu kaldýrabilirim  Abasecharacter'da bir tane daha var
 
     /// <summary>
@@ -123,4 +148,5 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
         float healthfill = targetHealImage.value;
         return healthfill + (rawHealing * (1 + healingRatio / 100) * (1 - healigMultiplier / 100));
     }
+
 }

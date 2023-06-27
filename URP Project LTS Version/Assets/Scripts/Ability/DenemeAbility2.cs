@@ -77,78 +77,84 @@ public class DenemeAbility2 : AMagicAbility, IAreaAbilityy, IContinousAbilityy, 
 
     public IEnumerator UseAbility(float firstAbilityDelay, float abilityCooldown, float abilityDamage)
     {
-        yield return new WaitForSeconds(firstAbilityDelay);
-        GetAbilityToTargetPositionChild(_gameObject, player.gameObject);
-        ShowArea(AreaRadius, _gameObject);
-        int showDuration = 50;
-        while (showDuration > 0)
+        while (isActiveted)
         {
-            yield return new WaitForSeconds(0.02f);
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            isActiveted = false;
+            isAbilityActive = false;
+            yield return new WaitForSeconds(firstAbilityDelay);
+            GetAbilityToTargetPositionChild(_gameObject, player.gameObject);
+            ShowArea(AreaRadius, _gameObject);
+            int showDuration = 50;
+            while (showDuration > 0)
             {
-                showDuration = 0;
-
-            }
-            showDuration--;
-        }
-        float tempContinuousAbilityRepetitions = ContinuousAbilityRepetitions;
-        int colliderCount;
-        EnemyHealthBar enemyHealthBar;
-        EnemyCharacter enemyCharacter;
-        if (HealingEnabled)
-        {
-            while (tempContinuousAbilityRepetitions > 0)
-            {
-
-                colliderCount = SearchArea(AreaRadius, _gameObject, SearchedArea, LayerMasktoSearch);
-                //colliderCount = Physics.OverlapSphereNonAlloc(bloodMagicData._gameObject.transform.position, bloodMagicData.AreaRadius, colliders, bloodMagicData.LayerMasktoSearch);
-                for (int i = 0; i < colliderCount; i++)
+                yield return new WaitForSeconds(0.02f);
+                if (Input.GetKeyDown(KeyCode.Mouse0))
                 {
-                    enemyHealthBar = SearchedArea[i].GetComponentInChildren<EnemyHealthBar>();
-                    enemyCharacter = SearchedArea[i].GetComponent<EnemyCharacter>();
-                    float a = player.CalculateDamage(characterAttackDamage: player.AttackPower,
-                                                baseAbilityDamage: abilityDamage,
-                                                abilityDamageRatio,
-                                                enemyCharacter.Armor,
-                                                player.criticRatio,
-                                                player.Level,
-                                                enemyCharacter.Level,
-                                                maxArmorHalf: enemyHealthBar.characterMaxHealth.maxArmor);
-                    Debug.Log(a);
-                    Debug.Log(enemyCharacter.Level);
-                    Debug.Log((1 + (player.Level / 200) - (enemyCharacter.Level / 200)));
-                    enemyHealthBar.DamageApply(a);
-                    enemyHealthBar.healthText.text = enemyHealthBar.BarValueAsIntegerDisplay(enemyHealthBar.healthbar);
-                }
-                tempContinuousAbilityRepetitions--;
-                yield return new WaitForSeconds(ContinuousAbilityDuration);
-
-            }
-            _dummyArea.SetActive(false);
-        }
-        else
-        {
-            while (tempContinuousAbilityRepetitions > 0)
-            {
-                SearchArea(AreaRadius, _gameObject, SearchedArea, LayerMasktoSearch);
-                //bloodMagicData.SearchedArea = SearchArea(bloodMagicData.AreaRadius, bloodMagicData._gameObject);
-                foreach (Collider enemy in SearchedArea)
-                {
-                    Debug.Log("çalýþýyor");
-                    //enemy.gameObject.GetComponentInChildren<EnemyHealth>()?.TakeDamage(abilityDamage);
+                    showDuration = 0;
 
                 }
-                tempContinuousAbilityRepetitions--;
-                yield return new WaitForSeconds(ContinuousAbilityDuration);
-
+                showDuration--;
             }
-            _dummyArea.SetActive(false);
+            float tempContinuousAbilityRepetitions = ContinuousAbilityRepetitions;
+            int colliderCount;
+            EnemyHealthBar enemyHealthBar;
+            EnemyCharacter enemyCharacter;
+            if (HealingEnabled)
+            {
+                while (tempContinuousAbilityRepetitions > 0)
+                {
+
+                    colliderCount = SearchArea(AreaRadius, _gameObject, SearchedArea, LayerMasktoSearch);
+                    //colliderCount = Physics.OverlapSphereNonAlloc(bloodMagicData._gameObject.transform.position, bloodMagicData.AreaRadius, colliders, bloodMagicData.LayerMasktoSearch);
+                    for (int i = 0; i < colliderCount; i++)
+                    {
+                        enemyHealthBar = SearchedArea[i].GetComponentInChildren<EnemyHealthBar>();
+                        enemyCharacter = SearchedArea[i].GetComponent<EnemyCharacter>();
+                        float a = player.CalculateDamage(characterAttackDamage: player.AttackPower,
+                                                    baseAbilityDamage: abilityDamage,
+                                                    abilityDamageRatio,
+                                                    enemyCharacter.Armor,
+                                                    player.criticRatio,
+                                                    player.Level,
+                                                    enemyCharacter.Level,
+                                                    maxArmorHalf: enemyHealthBar.characterMaxHealth.maxArmor);
+                        Debug.Log(a);
+                        Debug.Log(enemyCharacter.Level);
+                        Debug.Log((1 + (player.Level / 200) - (enemyCharacter.Level / 200)));
+                        enemyHealthBar.DamageApply(a);
+                        enemyHealthBar.healthText.text = enemyHealthBar.BarValueAsIntegerDisplay(enemyHealthBar.healthbar);
+                    }
+                    tempContinuousAbilityRepetitions--;
+                    yield return new WaitForSeconds(ContinuousAbilityDuration);
+
+                }
+                _dummyArea.SetActive(false);
+            }
+            else
+            {
+                while (tempContinuousAbilityRepetitions > 0)
+                {
+                    SearchArea(AreaRadius, _gameObject, SearchedArea, LayerMasktoSearch);
+                    //bloodMagicData.SearchedArea = SearchArea(bloodMagicData.AreaRadius, bloodMagicData._gameObject);
+                    foreach (Collider enemy in SearchedArea)
+                    {
+                        Debug.Log("çalýþýyor");
+                        //enemy.gameObject.GetComponentInChildren<EnemyHealth>()?.TakeDamage(abilityDamage);
+
+                    }
+                    tempContinuousAbilityRepetitions--;
+                    yield return new WaitForSeconds(ContinuousAbilityDuration);
+
+                }
+                _dummyArea.SetActive(false);
+            }
+            tempContinuousAbilityRepetitions = ContinuousAbilityRepetitions;
+
+            GetAbilityToTargetPositionChild(_gameObject, this.gameObject);
+            yield return new WaitForSeconds(abilityCooldown);
         }
-        tempContinuousAbilityRepetitions = ContinuousAbilityRepetitions;
-
-        GetAbilityToTargetPositionChild(_gameObject, this.gameObject);
-        yield return new WaitForSeconds(abilityCooldown);
-
+        isActiveted = true;
+        isAbilityActive = true;
     }
 
     public float Healing(float rawHealing, float healingRatio, float healigMultiplier = 0)

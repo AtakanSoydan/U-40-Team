@@ -11,6 +11,7 @@ public class EnemyHealthBar : ABaseHealthBar
     public Transform cameraTransform;
     public Quaternion quaternion;
     Vector3 barLookDirection;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class EnemyHealthBar : ABaseHealthBar
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void LateUpdate()
     {
@@ -32,5 +33,20 @@ public class EnemyHealthBar : ABaseHealthBar
         quaternion = Quaternion.LookRotation(barLookDirection);
         gameObject.transform.parent.rotation = quaternion;
 
+    }
+    private void OnEnable()
+    {
+        OnDamaged += EnemyHealthBar_OnDamaged;
+    }
+
+
+    private void OnDisable()
+    {
+        OnDamaged -= EnemyHealthBar_OnDamaged;
+    }
+
+    private void EnemyHealthBar_OnDamaged(object sender, System.EventArgs e)
+    {
+        Debug.Log("enemy deneme2");
     }
 }
