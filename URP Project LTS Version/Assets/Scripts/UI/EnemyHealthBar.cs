@@ -11,6 +11,7 @@ public class EnemyHealthBar : ABaseHealthBar
     public Transform cameraTransform;
     public Quaternion quaternion;
     Vector3 barLookDirection;
+    [SerializeField] private DissolveController_Deneme dissolve;
 
     // Start is called before the first frame update
     void Start()
@@ -48,5 +49,12 @@ public class EnemyHealthBar : ABaseHealthBar
     private void EnemyHealthBar_OnDamaged(object sender, System.EventArgs e)
     {
         Debug.Log("enemy deneme2");
+        UpdateCurrentHealthAndBarText(healthText, healthbar, characterHealth);
+        if (characterHealth.currentHealth <=0 )
+        {
+            dissolve = characterHealth.gameObject.GetComponent<DissolveController_Deneme>();
+            StartCoroutine(dissolve.Dissolve_Deneme());
+            //dissolve.gameObject.SetActive(false);
+        }
     }
 }

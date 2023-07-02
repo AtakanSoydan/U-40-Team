@@ -66,25 +66,28 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
     /// <param name="amount">Hesaplanmýþ hasar miktarý. Bu hasar miktarý kadar can azalacak</param>
     public void DamageApply(float amount)
     {
-
-
-
-        //Debug.Log("damage");
-        healthbar.value -= amount;
-        takedDamage = true;
-        if (health < 0)
+        if (characterHealth.currentHealth >0)
         {
-            health = 0;
-        }
-        
-        if (OnDamaged != null)
-        {
-            OnDamaged(this, EventArgs.Empty);
+
+
+            //Debug.Log("damage");
+            healthbar.value -= amount;
+            takedDamage = true;
+            if (health < 0)
+            {
+                health = 0;
+            }
+
+            if (OnDamaged != null)
+            {
+                OnDamaged(this, EventArgs.Empty);
+
+            }
+
+            takedDamage = false;
+
 
         }
-
-        takedDamage = false;
-
 
     }
     /*
@@ -114,14 +117,15 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
         return Mathf.CeilToInt(value).ToString();
     }
 
-    public int UpdateCurrentHealthWithBarValue(Slider healthbar)
+    public void UpdateCurrentHealthWithBarText(TextMeshProUGUI healthbar, ABaseCharacter characterHealth)
     {
-        return Mathf.CeilToInt(healthbar.value);
+        int.TryParse(healthbar.text, out characterHealth.currentHealth);
+        //int.TryParse(healthText.text, out characterHealth.currentHealth);
     }
 
-    public int UpdateCurrentHealthWithBarValue(float healthbar)
+    public void UpdateCurrentHealthWithBarText(string healthbar, ABaseCharacter characterHealth)
     {
-        return Mathf.CeilToInt(healthbar);
+        int.TryParse(healthbar, out characterHealth.currentHealth);
     }
 
     public int BarValueAsIntegerDisplay(Slider healthbar, TextMeshProUGUI healthText)
@@ -129,6 +133,11 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
         int a = Mathf.CeilToInt(healthbar.value);
         healthText.SetText(a.ToString());
         return a;
+    }
+    public void UpdateCurrentHealthAndBarText(TextMeshProUGUI healthText, Slider healthbar, ABaseCharacter characterHealth)
+    {
+        healthText.text = BarValueAsIntegerDisplay(healthbar);
+        UpdateCurrentHealthWithBarText(healthText.text, characterHealth);
     }
 
     //TODO bunu kaldýrabilirim  Abasecharacter'da bir tane daha var

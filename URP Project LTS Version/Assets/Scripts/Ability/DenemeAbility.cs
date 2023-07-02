@@ -63,6 +63,7 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
     public ABaseCharacter enemyCharacter;
     public ABaseHealthBar enemyHealthBar;
     public Collider[] colliders;
+    [SerializeField] Coroutine denemeAbilityCor;
 
     //public GameObject denemeArea;
     //public Transform denemeAreaParentTransform;
@@ -87,6 +88,22 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
         tempDummyArea = Vector3.zero;
     }
 
+    void Update()
+    {
+        CancelTime(_dummyArea, ref showDuration, denemeAbilityCor);
+        /*
+        if (!canceled && canMove)
+        {
+            MoveArea(_dummyArea);
+        }*/
+        MoveArea(_dummyArea);
+    }
+    /*
+    private void LateUpdate()
+    {
+        MoveArea(_dummyArea);
+    }
+    */
 
     /// <summary>
     ///     Göstermelik alaný aktive eden metot
@@ -117,7 +134,7 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
 
     public void MoveArea(GameObject denemeArea)
     {
-        if (canMove)
+        if (canMove && !canceled)
         {
             Debug.Log("Ray çalýþýyor");
             ray = activeCamera.ScreenPointToRay(Input.mousePosition);
@@ -188,7 +205,7 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
     {
         if (isAbilityActive)
         {
-            StartCoroutine(UseAbility(firstAbilityDelay, abilityCooldown, abilityDamage));
+            denemeAbilityCor= StartCoroutine(UseAbility(firstAbilityDelay, abilityCooldown, abilityDamage));
         }
     }
 
@@ -206,8 +223,12 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
             isActiveted = false;
             isAbilityActive = false;
             canMove = true;
+            canceled= false;
+            showDuration = 50.0f;
             yield return new WaitForSeconds(firstAbilityDelay);
+            canCancelTime = true;
             ShowArea(AreaRadius, _dummyArea);
+            /*
             short tempMoveDuration = moveDuration;
             while (canMove && moveDuration > 0)
             {
@@ -220,8 +241,14 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
                 yield return new WaitForSeconds(0.02f);
                 moveDuration--;
             }
-            canMove = false;
             moveDuration = tempMoveDuration;
+            */
+            while (canCancelTime)
+            {
+                Debug.Log("canCancelTime devam ediyor2");
+                yield return null;
+            }
+            canMove = false;
             float tempContinuousAbilityRepetitions = ContinuousAbilityRepetitions;
             if (HealingEnabled)
             {

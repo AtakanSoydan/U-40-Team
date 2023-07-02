@@ -65,8 +65,14 @@ public class PlayerHealthBar : ABaseHealthBar
         damagedHealthShrinkTimer = damageShrinkTimerMax;
         autoHealTimer = autoHealTimerConst;
         takedDamage = false;
+        UpdateCurrentHealthAndBarText(healthText, healthbar, characterHealth);
         isActiveAutoHealing = false;
+        /*
+
         healthText.text = BarValueAsIntegerDisplay(healthbar);
+        */
+        UpdateCurrentHealthWithBarText(healthText.text, characterHealth);
+        //int.TryParse(healthText.text, out characterHealth.currentHealth);
         //DamageBarEffect();
         //Debug.Log("Çalýþýyor");
 
@@ -94,7 +100,11 @@ public class PlayerHealthBar : ABaseHealthBar
             float tempvalue = healthbar.value + Time.deltaTime * autoHealSpeed;
             healthbar.value += Time.deltaTime * autoHealSpeed;
             //Debug.Log(healthbar.value);
+            UpdateCurrentHealthAndBarText(healthText, healthbar, characterHealth);
+            /*
             healthText.text = BarValueAsIntegerDisplay(healthbar);
+            UpdateCurrentHealthWithBarText(healthText.text, characterHealth);
+            */
             DamagedHealth.rectTransform.anchorMax = healthbar.fillRect.anchorMax;
         }
 
