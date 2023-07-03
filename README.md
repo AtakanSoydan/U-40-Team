@@ -99,12 +99,13 @@ Alınan kararlar: Farklı oyun fikirleri konuşulup sonunda hangisi yapılacağ�
   ![Screenshot 2](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product6.gif)
   ![Screenshot 3](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product7.gif)
 - **Sprint Review**: 
-Alınan kararlar: Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. 
-Sprint Review katılımcıları: Mustafa Aksoy, Yunus Emre Gürel, Sümeyye Aydoğan 
+Alınan kararlar: Soulstone Survivors 3D (İlham aldığımız horde-like oyun) temel halde arena bölümlerini oynayabilecek hale gelmek için temeller atılmış, kalan görsellik ve oyun hissi verilmesi için çalışmalara başlanmıştır. Player ve canavar statlarının tutulduğu scriptable objeler tasarlanmış, arena tasarımı için gerekli araştırmalar yapılmış ve önceki build'lerden kalan tüm bug'lar düzeltilmiştir. Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
 - **Sprint Retrospective:**
-
+  - Combat, Enemy, Level Design görevleri bölüştürülmüştür.
+  - Kart mekaniklerinin ve farklı class'ların oynanışları konuşulup kararlaştırılmıştır.
   - Takım üyelerinin gelecek sprintlerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
+
 
 
 ---
