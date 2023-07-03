@@ -103,14 +103,14 @@ Alınan kararlar: Soulstone Survivors 3D (İlham aldığımız horde-like oyun) 
 Puanlama Sistemi: Her "Major Görev" (Yazılımın görünmeyen kısmı, gözüken kısmı; Sanat, karakter, çevre modellerinin bulunup yerleştirilmesi.) 20 puan olacak şekilde ve "Bug Fixing" görevlerinin de toplam 10 puan alınacağı kararlaştırılmıştır. (Bazenleri yeni bir Major Görev'e girişmektense hali hazırdaki sistemlerin düzeltilmesi, iyileştirilmesi ve bunun değip, değmeyeceği kararlaştırıldıktan sonra Bug Fix'leme işlemlerinin de Sprint puanlama sistemi içerisine entegre etmemiz gerektiğine karar verdik.)
 Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
-Alınan Toplam Puan:
-- MAJOR - Oyuncu Animasyon Sistemi (20 Puan)
-- MAJOR - Obje Fade Out Sistemi (20 Puan)
-- MAJOR - Yetenek Sistemi (20 Puan)
-- MAJOR - Canavar/Oyuncu Veri Sistemi (20 Puan)
-- MAJOR - Çevre Tasarımı - Arena 1 (20 Puan)
-- BUG FIX - Fade Out Sistemi iyileştirildi (10 Puan)
-- BUG FIX - Blend Tree ve karakter animasyon sistemleri iyileştirildi (10 Puan)
+- **Alınan Toplam Puan**:
+  - MAJOR - Oyuncu Animasyon Sistemi (20 Puan)
+  - MAJOR - Obje Fade Out Sistemi (20 Puan)
+  - MAJOR - Yetenek Sistemi (20 Puan)
+  - MAJOR - Canavar/Oyuncu Veri Sistemi (20 Puan)
+  - MAJOR - Çevre Tasarımı - Arena 1 (20 Puan)
+  - BUG FIX - Fade Out Sistemi iyileştirildi (10 Puan)
+  - BUG FIX - Blend Tree ve karakter animasyon sistemleri iyileştirildi (10 Puan)
 
 *120/150 PUAN ALINDI*
 
