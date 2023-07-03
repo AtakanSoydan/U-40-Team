@@ -95,9 +95,9 @@ Alınan kararlar: Farklı oyun fikirleri konuşulup sonunda hangisi yapılacağ�
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1]
-  ![Screenshot 2]
-  ![Screenshot 3]
+  ![Screenshot 1](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product5.png)
+  ![Screenshot 2](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product6.gif)
+  ![Screenshot 3](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product7.gif)
 - **Sprint Review**: 
 Alınan kararlar: Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. 
 Sprint Review katılımcıları: Mustafa Aksoy, Yunus Emre Gürel, Sümeyye Aydoğan 
