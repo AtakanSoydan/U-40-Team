@@ -116,6 +116,7 @@ Alınan Toplam Puan:
 - **Sprint Retrospective:**
   - Combat, Enemy, Level Design görevleri bölüştürülmüştür.
   - Kart mekaniklerinin ve farklı class'ların oynanışları konuşulup kararlaştırılmıştır.
+  - Oyunun oynanabilir bir Level'ını tasarlayarak bir "vertical slice" örneği oluşturulması ve test edilmesi kararlaştırılmıştır.
   - Takım üyelerinin gelecek sprintlerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
 
 
