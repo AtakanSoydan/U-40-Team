@@ -83,3 +83,34 @@ Alınan kararlar: Farklı oyun fikirleri konuşulup sonunda hangisi yapılacağ�
 [Unity Team 40 Trello Backlog Board](https://trello.com/b/maImobOO/ouau-40)
 
 ---
+
+# Sprint 2
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 120 Puan
+
+- **Daily Scrum**: Daily Scrum toplantılarının zamansal sebeplerden ötürü Whatsapp üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği jpeg veya word olarak Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/DailyScrumMeetingNotesSprint2.docx?raw=true)
+
+- **Sprint board update**: Sprint board screenshotları: 
+![Backlog 1](https://raw.githubusercontent.com/AtakanSoydan/U-40-Team/main/ProjectManagement/Sprint1Documents/backlog1.png) 
+
+
+- **Ürün Durumu**: Ekran görüntüleri:
+  ![Screenshot 1]
+  ![Screenshot 2]
+  ![Screenshot 3]
+- **Sprint Review**: 
+Alınan kararlar: Kullanıcı temel sayfaların arayüzleri, algoritmaları kodlanmış, firebase servislerine bağlantıları yapılmış ve eksiklikleri değerlendirilmiştir. 
+Sprint Review katılımcıları: Mustafa Aksoy, Yunus Emre Gürel, Sümeyye Aydoğan 
+
+- **Sprint Retrospective:**
+
+  - Takım üyelerinin gelecek sprintlerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
+
+
+---
+
+## Product Backlog URL
+
+[Unity Team 40 Trello Backlog Board](https://trello.com/b/maImobOO/ouau-40)
+
+---
