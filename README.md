@@ -88,7 +88,7 @@ Alınan kararlar: Farklı oyun fikirleri konuşulup sonunda hangisi yapılacağ�
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
 
-- **Daily Scrum**: Daily Scrum toplantılarının saati Whatsapp'tan kararlaştırılıp, Discord üzerinden gerçekleştirilmektedir. Anlık görüşme, fikir alışverişleri için WhatsApp kullanılmış, Projeye dair tüm detaylar, kaynaklar, ilham alınan projeler Discord üzerinden paylaşılmıştır. Daily Scrum'a dair konuşmalar ve genel sohbetlerimize dair örnek word dosyası hazırlanmıştır, Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/OyunveUygulamaAkademisi/Bootcamp2022Example/blob/main/ProjectManagement/Sprint2Documents/DailyScrumMeetingNotesSprint2.docx?raw=true)
+- **Daily Scrum**: Daily Scrum toplantılarının saati Whatsapp'tan kararlaştırılıp, Discord üzerinden gerçekleştirilmektedir. Anlık görüşme, fikir alışverişleri için WhatsApp kullanılmış, Projeye dair tüm detaylar, kaynaklar, ilham alınan projeler Discord üzerinden paylaşılmıştır. Daily Scrum'a dair konuşmalar ve genel sohbetlerimize dair örnek word dosyası hazırlanmıştır, Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/ScrumMasterDailyChart2.docx?raw=true)
 
 - **Sprint board update**: Sprint board screenshotları: 
 ![Backlog 1](https://raw.githubusercontent.com/AtakanSoydan/U-40-Team/main/ProjectManagement/Sprint2Documents/backlog2.png) 
