@@ -111,6 +111,7 @@ Alınan Toplam Puan:
 - MAJOR - Çevre Tasarımı - Arena 1 (20 Puan)
 - BUG FIX - Fade Out Sistemi iyileştirildi (10 Puan)
 - BUG FIX - Blend Tree ve karakter animasyon sistemleri iyileştirildi (10 Puan)
+
 *120/150 PUAN ALINDI*
 
 - **Sprint Retrospective:**
