@@ -114,6 +114,9 @@ Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
 *120/150 PUAN ALINDI*
 
+- **2. Sprint Notu**:
+  - 
+
 - **Sprint Retrospective:**
   - Combat, Enemy, Level Design görevleri bölüştürülmüştür.
   - Kart mekaniklerinin ve farklı class'ların oynanışları konuşulup kararlaştırılmıştır.
