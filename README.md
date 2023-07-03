@@ -102,7 +102,7 @@ Alınan kararlar: Farklı oyun fikirleri konuşulup sonunda hangisi yapılacağ�
 Alınan kararlar: Soulstone Survivors 3D (İlham aldığımız horde-like oyun) temel halde arena bölümlerini oynayabilecek hale gelmek için temeller atılmış, kalan görsellik ve oyun hissi verilmesi için çalışmalara başlanmıştır. Player ve canavar statlarının tutulduğu scriptable objeler tasarlanmış, arena tasarımı için gerekli araştırmalar yapılmış ve önceki build'lerden kalan tüm bug'lar düzeltilmiştir. 
 Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
-- **Puanlama Sistemi:** Her "Major Görev" (Yazılımın görünmeyen kısmı, gözüken kısmı; Sanat, karakter, çevre modellerinin bulunup yerleştirilmesi.) 20 puan olacak şekilde ve "Bug Fixing" görevlerinin de toplam 10 puan alınacağı kararlaştırılmıştır. (Bazenleri yeni bir Major Görev'e girişmektense hali hazırdaki sistemlerin düzeltilmesi, iyileştirilmesi ve bunun değip, değmeyeceği kararlaştırıldıktan sonra Bug Fix'leme işlemlerinin de Sprint puanlama sistemi içerisine entegre etmemiz gerektiğine karar verdik.)
+- **Sprint Puanlama Mantığı:** Her "Major Görev" (Yazılımın görünmeyen kısmı, gözüken kısmı; Sanat, karakter, çevre modellerinin bulunup yerleştirilmesi.) 20 puan olacak şekilde ve "Bug Fixing" görevlerinin de toplam 10 puan alınacağı kararlaştırılmıştır. (Bazenleri yeni bir Major Görev'e girişmektense hali hazırdaki sistemlerin düzeltilmesi, iyileştirilmesi ve bunun değip, değmeyeceği kararlaştırıldıktan sonra Bug Fix'leme işlemlerinin de Sprint puanlama sistemi içerisine entegre etmemiz gerektiğine karar verdik.)
 
 - **Alınan Toplam Puan:**
   - MAJOR - Oyuncu Animasyon Sistemi (20 Puan)
