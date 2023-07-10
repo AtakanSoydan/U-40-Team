@@ -148,6 +148,8 @@ GameObject:
   - component: {fileID: 5106839862655114960}
   - component: {fileID: 1504538335324099657}
   - component: {fileID: 2145253004697847221}
+  - component: {fileID: 8382166185668621311}
+  - component: {fileID: 868413452043187140}
   m_Layer: 6
   m_Name: Enemy
   m_TagString: Untagged
@@ -269,6 +271,43 @@ MonoBehaviour:
   AttackDebuffMultiplier: 0
   DefenseBuffMultiplier: 0
   DefenseDebuffMultiplier: 0
+  isCritic: 0
+--- !u!114 &8382166185668621311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360693059795390159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5954495dd128304581702cb362f6bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 868413452043187140}
+  Player: {fileID: 0}
+--- !u!195 &868413452043187140
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7360693059795390159}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &9065224281152063157
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +688,7 @@ MonoBehaviour:
   takedDamage: 0
   levelText: {fileID: 1883931638707480497}
   cameraTransform: {fileID: 0}
+  quaternion: {x: 0, y: 0, z: 0, w: 0}
 --- !u!224 &2691682199490544896 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2011600048577475043, guid: 47bc2065b520c064c89e7bf0b3bea393,
