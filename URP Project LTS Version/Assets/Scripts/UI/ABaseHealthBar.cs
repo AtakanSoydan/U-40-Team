@@ -10,7 +10,7 @@ using UnityEngine.UI;
 public abstract class ABaseHealthBar : MonoBehaviour, IDamage
 {
 
-    public ABaseCharacter characterHealth;
+    public ABaseCharacter characterInfo;
     public ABaseCharacterData characterMaxHealth;
     //public float changeSpeed;
     //public float lerpTime;
@@ -20,13 +20,18 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
     public TextMeshProUGUI healthText;
     public float damage;
     public float health;
+    public bool wasCritic;
     //public float maximumHealth = 1000;
 
     public event EventHandler OnDamaged;
+    DamageDisplayEventArgs damageDisplayEventArgs;
 
     public bool takedDamage = false;
 
-
+    private void Start()
+    {
+        damageDisplayEventArgs = new DamageDisplayEventArgs(damage);
+    }
     /// <summary>
     /// Verilerin belli aralýktan baþka aralýðý taþýnmasýnda kullanýlan metottur
     /// </summary>
@@ -64,14 +69,15 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
     /// Hasarýn uygulandýðý sýnýf
     /// </summary>
     /// <param name="amount">Hesaplanmýþ hasar miktarý. Bu hasar miktarý kadar can azalacak</param>
-    public void DamageApply(float amount)
+    public void DamageApply(float amount, bool isCritic=false)
     {
-        if (characterHealth.currentHealth >0)
+        if (characterInfo.currentHealth >0)
         {
 
 
             //Debug.Log("damage");
             healthbar.value -= amount;
+            wasCritic = isCritic;
             takedDamage = true;
             if (health < 0)
             {
@@ -80,7 +86,9 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
 
             if (OnDamaged != null)
             {
-                OnDamaged(this, EventArgs.Empty);
+                damage = amount;
+                //damageDisplayEventArgs.DamageAmount = amount;
+                OnDamaged(this, System.EventArgs.Empty);
 
             }
 
@@ -120,7 +128,7 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
     public void UpdateCurrentHealthWithBarText(TextMeshProUGUI healthbar, ABaseCharacter characterHealth)
     {
         int.TryParse(healthbar.text, out characterHealth.currentHealth);
-        //int.TryParse(healthText.text, out characterHealth.currentHealth);
+        //int.TryParse(healthText.text, out characterInfo.currentHealth);
     }
 
     public void UpdateCurrentHealthWithBarText(string healthbar, ABaseCharacter characterHealth)

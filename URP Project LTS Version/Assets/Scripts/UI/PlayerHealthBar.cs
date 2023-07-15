@@ -31,7 +31,7 @@ public class PlayerHealthBar : ABaseHealthBar
     {
 
         SetMaxHealth(characterMaxHealth.maxHealth, healthbar);
-        SetHealth(characterHealth.currentHealth, healthbar);
+        SetHealth(characterInfo.currentHealth, healthbar);
         DamagedHealthColor = DamagedHealth.color;
         tempDamagedHealthColor = DamagedHealthColor;
         DamagedHealthColor.a = 0;
@@ -65,14 +65,14 @@ public class PlayerHealthBar : ABaseHealthBar
         damagedHealthShrinkTimer = damageShrinkTimerMax;
         autoHealTimer = autoHealTimerConst;
         takedDamage = false;
-        UpdateCurrentHealthAndBarText(healthText, healthbar, characterHealth);
+        UpdateCurrentHealthAndBarText(healthText, healthbar, characterInfo);
         isActiveAutoHealing = false;
         /*
 
         healthText.text = BarValueAsIntegerDisplay(healthbar);
         */
-        UpdateCurrentHealthWithBarText(healthText.text, characterHealth);
-        //int.TryParse(healthText.text, out characterHealth.currentHealth);
+        UpdateCurrentHealthWithBarText(healthText.text, characterInfo);
+        //int.TryParse(healthText.text, out characterInfo.currentHealth);
         //DamageBarEffect();
         //Debug.Log("Çalýþýyor");
 
@@ -100,10 +100,10 @@ public class PlayerHealthBar : ABaseHealthBar
             float tempvalue = healthbar.value + Time.deltaTime * autoHealSpeed;
             healthbar.value += Time.deltaTime * autoHealSpeed;
             //Debug.Log(healthbar.value);
-            UpdateCurrentHealthAndBarText(healthText, healthbar, characterHealth);
+            UpdateCurrentHealthAndBarText(healthText, healthbar, characterInfo);
             /*
             healthText.text = BarValueAsIntegerDisplay(healthbar);
-            UpdateCurrentHealthWithBarText(healthText.text, characterHealth);
+            UpdateCurrentHealthWithBarText(healthText.text, characterInfo);
             */
             DamagedHealth.rectTransform.anchorMax = healthbar.fillRect.anchorMax;
         }

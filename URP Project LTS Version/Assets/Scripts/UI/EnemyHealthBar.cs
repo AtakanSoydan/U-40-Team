@@ -9,7 +9,7 @@ public class EnemyHealthBar : ABaseHealthBar
 {
     public TextMeshProUGUI levelText;
     public Transform cameraTransform;
-    public Quaternion quaternion;
+    public Quaternion textCameraLookQuaternion;
     Vector3 barLookDirection;
     [SerializeField] private DissolveController_Deneme dissolve;
 
@@ -17,9 +17,9 @@ public class EnemyHealthBar : ABaseHealthBar
     void Start()
     {
         SetMaxHealth(characterMaxHealth.maxHealth, healthbar);
-        SetHealth(characterHealth.currentHealth, healthbar);
+        SetHealth(characterInfo.currentHealth, healthbar);
         healthText.text = BarValueAsIntegerDisplay(healthbar);
-        levelText.text = $"Level {characterHealth.Level}";
+        levelText.text = $"Level {characterInfo.Level}";
         
     }
 
@@ -31,8 +31,8 @@ public class EnemyHealthBar : ABaseHealthBar
     private void LateUpdate()
     {
         barLookDirection = gameObject.transform.position - cameraTransform.position;
-        quaternion = Quaternion.LookRotation(barLookDirection);
-        gameObject.transform.parent.rotation = quaternion;
+        textCameraLookQuaternion = Quaternion.LookRotation(barLookDirection);
+        gameObject.transform.parent.rotation = textCameraLookQuaternion;
 
     }
     private void OnEnable()
@@ -49,10 +49,10 @@ public class EnemyHealthBar : ABaseHealthBar
     private void EnemyHealthBar_OnDamaged(object sender, System.EventArgs e)
     {
         Debug.Log("enemy deneme2");
-        UpdateCurrentHealthAndBarText(healthText, healthbar, characterHealth);
-        if (characterHealth.currentHealth <=0 )
+        UpdateCurrentHealthAndBarText(healthText, healthbar, characterInfo);
+        if (characterInfo.currentHealth <=0 )
         {
-            dissolve = characterHealth.gameObject.GetComponent<DissolveController_Deneme>();
+            dissolve = characterInfo.gameObject.GetComponent<DissolveController_Deneme>();
             StartCoroutine(dissolve.Dissolve_Deneme());
             //dissolve.gameObject.SetActive(false);
         }
