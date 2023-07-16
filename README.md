@@ -158,7 +158,7 @@ Sprint Review katılımcıları: Ömer Tuğrul Bakan
   - MAJOR - Enemy Spawner (20 Puan)
   - BUG FIX - Oyuncu Animasyon Düzeltme (10 Puan)
 
-*120/150 PUAN ALINDI*
+*50/150 PUAN ALINDI*
 
 - **2. Sprint Notu:**
   - Oyunun oynanabilir bir Level'ını tasarlayarak bir "vertical slice" örneği oluşturulması ve test edilmesi için çalışılmıştır.
