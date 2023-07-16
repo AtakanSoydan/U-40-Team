@@ -144,7 +144,8 @@ Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint3Documents/product8.gif)
+
+   ![Screenshot 1](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint3Documents/product8.gif)
   ![Screenshot 2](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint3Documents/product9.gif)
 - **Sprint Review:** 
 Alınan kararlar: Yeni özellikler ekleyerek oyunun temel mekaniklerini bitirmeye çalıştık.
