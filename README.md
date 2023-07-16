@@ -137,7 +137,7 @@ Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
 - **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
 
-- **Daily Scrum**: Daily Scrum toplantılarının saati Whatsapp'tan kararlaştırılıp, Discord üzerinden gerçekleştirilmektedir. Anlık görüşme, fikir alışverişleri için WhatsApp kullanılmış, Projeye dair tüm detaylar, kaynaklar, ilham alınan projeler Discord üzerinden paylaşılmıştır. Daily Scrum'a dair konuşmalar ve genel sohbetlerimize dair örnek word dosyası hazırlanmıştır, Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/ScrumMasterDailyChart2.docx?raw=true)
+- **Daily Scrum**: Daily Scrum toplantılarının saati Whatsapp'tan kararlaştırılıp, Discord üzerinden gerçekleştirilmektedir. Anlık görüşme, fikir alışverişleri için WhatsApp kullanılmış, Projeye dair tüm detaylar, kaynaklar, ilham alınan projeler Discord üzerinden paylaşılmıştır. Daily Scrum'a dair konuşmalar ve genel sohbetlerimize dair örnek word dosyası hazırlanmıştır, Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint3Documents/ScrumMasterDailyChart3.docx?raw=true)
 
 - **Sprint board update**: Sprint board screenshotları: 
 ![Backlog 1](https://raw.githubusercontent.com/AtakanSoydan/U-40-Team/main/ProjectManagement/Sprint2Documents/backlog2.png) 
@@ -154,13 +154,9 @@ Sprint Review katılımcıları: Ömer Tuğrul Bakan
 - **Sprint Puanlama Mantığı:** Her "Major Görev" (Yazılımın görünmeyen kısmı, gözüken kısmı; Sanat, karakter, çevre modellerinin bulunup yerleştirilmesi.) 20 puan olacak şekilde ve "Bug Fixing" görevlerinin de toplam 10 puan alınacağı kararlaştırılmıştır. (Bazenleri yeni bir Major Görev'e girişmektense hali hazırdaki sistemlerin düzeltilmesi, iyileştirilmesi ve bunun değip, değmeyeceği kararlaştırıldıktan sonra Bug Fix'leme işlemlerinin de Sprint puanlama sistemi içerisine entegre etmemiz gerektiğine karar verdik.)
 
 - **Alınan Toplam Puan:**
-  - MAJOR - Oyuncu Animasyon Sistemi (20 Puan)
-  - MAJOR - Obje Fade Out Sistemi (20 Puan)
-  - MAJOR - Yetenek Sistemi (20 Puan)
-  - MAJOR - Canavar/Oyuncu Veri Sistemi (20 Puan)
-  - MAJOR - Çevre Tasarımı - Arena 1 (20 Puan)
-  - BUG FIX - Fade Out Sistemi iyileştirildi (10 Puan)
-  - BUG FIX - Blend Tree ve karakter animasyon sistemleri iyileştirildi (10 Puan)
+  - MAJOR - Dashing (20 Puan)
+  - MAJOR - Enemy Spawner (20 Puan)
+  - BUG FIX - Oyuncu Animasyon Düzeltme (10 Puan)
 
 *120/150 PUAN ALINDI*
 
