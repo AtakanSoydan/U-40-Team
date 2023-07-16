@@ -147,7 +147,7 @@ Sprint Review katılımcıları: Ömer Tuğrul Bakan
   ![Screenshot 1](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint3Documents/product8.gif)
   ![Screenshot 2](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint3Documents/product9.gif)
 - **Sprint Review:** 
-Alınan kararlar: Soulstone Survivors 3D (İlham aldığımız horde-like oyun) temel halde arena bölümlerini oynayabilecek hale gelmek için temeller atılmış, kalan görsellik ve oyun hissi verilmesi için çalışmalara başlanmıştır. Player ve canavar statlarının tutulduğu scriptable objeler tasarlanmış, arena tasarımı için gerekli araştırmalar yapılmış ve önceki build'lerden kalan tüm bug'lar düzeltilmiştir. 
+Alınan kararlar: Yeni özellikler ekleyerek oyunun temel mekaniklerini bitirmeye çalıştık.
 Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
 - **Sprint Puanlama Mantığı:** Her "Major Görev" (Yazılımın görünmeyen kısmı, gözüken kısmı; Sanat, karakter, çevre modellerinin bulunup yerleştirilmesi.) 20 puan olacak şekilde ve "Bug Fixing" görevlerinin de toplam 10 puan alınacağı kararlaştırılmıştır. (Bazenleri yeni bir Major Görev'e girişmektense hali hazırdaki sistemlerin düzeltilmesi, iyileştirilmesi ve bunun değip, değmeyeceği kararlaştırıldıktan sonra Bug Fix'leme işlemlerinin de Sprint puanlama sistemi içerisine entegre etmemiz gerektiğine karar verdik.)
@@ -159,13 +159,11 @@ Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
 *50/150 PUAN ALINDI*
 
-- **2. Sprint Notu:**
+- **3. Sprint Notu:**
   - Oyunun oynanabilir bir Level'ını tasarlayarak bir "vertical slice" örneği oluşturulması ve test edilmesi için çalışılmıştır.
 
 - **Sprint Retrospective:**
-  - Combat, Enemy, Level Design görevleri bölüştürülmüştür.
-  - Kart mekaniklerinin ve farklı class'ların oynanışları konuşulup kararlaştırılmıştır.
-  - Takım üyelerinin gelecek sprintlerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
+  - Son eklemeler yapılmıştır.
 
 
 
