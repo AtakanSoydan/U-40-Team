@@ -144,9 +144,8 @@ Sprint Review katılımcıları: Ömer Tuğrul Bakan
 
 
 - **Ürün Durumu**: Ekran görüntüleri:
-  ![Screenshot 1](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product5.png)
-  ![Screenshot 2](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product6.gif)
-  ![Screenshot 3](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product7.gif)
+  ![Screenshot 1](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint3Documents/product8.gif)
+  ![Screenshot 2](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint3Documents/product9.gif)
 - **Sprint Review:** 
 Alınan kararlar: Soulstone Survivors 3D (İlham aldığımız horde-like oyun) temel halde arena bölümlerini oynayabilecek hale gelmek için temeller atılmış, kalan görsellik ve oyun hissi verilmesi için çalışmalara başlanmıştır. Player ve canavar statlarının tutulduğu scriptable objeler tasarlanmış, arena tasarımı için gerekli araştırmalar yapılmış ve önceki build'lerden kalan tüm bug'lar düzeltilmiştir. 
 Sprint Review katılımcıları: Ömer Tuğrul Bakan
