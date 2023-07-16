@@ -132,3 +132,46 @@ Sprint Review katılımcıları: Ömer Tuğrul Bakan
 [Unity Team 40 Trello Backlog Board](https://trello.com/b/maImobOO/ouau-40)
 
 ---
+
+# Sprint 3
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 150 Puan
+
+- **Daily Scrum**: Daily Scrum toplantılarının saati Whatsapp'tan kararlaştırılıp, Discord üzerinden gerçekleştirilmektedir. Anlık görüşme, fikir alışverişleri için WhatsApp kullanılmış, Projeye dair tüm detaylar, kaynaklar, ilham alınan projeler Discord üzerinden paylaşılmıştır. Daily Scrum'a dair konuşmalar ve genel sohbetlerimize dair örnek word dosyası hazırlanmıştır, Readme'de tarafımızdan paylaşılmaktadır: [Sprint 2 Daily Scrum Chats](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/ScrumMasterDailyChart2.docx?raw=true)
+
+- **Sprint board update**: Sprint board screenshotları: 
+![Backlog 1](https://raw.githubusercontent.com/AtakanSoydan/U-40-Team/main/ProjectManagement/Sprint2Documents/backlog2.png) 
+
+
+- **Ürün Durumu**: Ekran görüntüleri:
+  ![Screenshot 1](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product5.png)
+  ![Screenshot 2](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product6.gif)
+  ![Screenshot 3](https://github.com/AtakanSoydan/U-40-Team/blob/main/ProjectManagement/Sprint2Documents/product7.gif)
+- **Sprint Review:** 
+Alınan kararlar: Soulstone Survivors 3D (İlham aldığımız horde-like oyun) temel halde arena bölümlerini oynayabilecek hale gelmek için temeller atılmış, kalan görsellik ve oyun hissi verilmesi için çalışmalara başlanmıştır. Player ve canavar statlarının tutulduğu scriptable objeler tasarlanmış, arena tasarımı için gerekli araştırmalar yapılmış ve önceki build'lerden kalan tüm bug'lar düzeltilmiştir. 
+Sprint Review katılımcıları: Ömer Tuğrul Bakan
+
+- **Sprint Puanlama Mantığı:** Her "Major Görev" (Yazılımın görünmeyen kısmı, gözüken kısmı; Sanat, karakter, çevre modellerinin bulunup yerleştirilmesi.) 20 puan olacak şekilde ve "Bug Fixing" görevlerinin de toplam 10 puan alınacağı kararlaştırılmıştır. (Bazenleri yeni bir Major Görev'e girişmektense hali hazırdaki sistemlerin düzeltilmesi, iyileştirilmesi ve bunun değip, değmeyeceği kararlaştırıldıktan sonra Bug Fix'leme işlemlerinin de Sprint puanlama sistemi içerisine entegre etmemiz gerektiğine karar verdik.)
+
+- **Alınan Toplam Puan:**
+  - MAJOR - Oyuncu Animasyon Sistemi (20 Puan)
+  - MAJOR - Obje Fade Out Sistemi (20 Puan)
+  - MAJOR - Yetenek Sistemi (20 Puan)
+  - MAJOR - Canavar/Oyuncu Veri Sistemi (20 Puan)
+  - MAJOR - Çevre Tasarımı - Arena 1 (20 Puan)
+  - BUG FIX - Fade Out Sistemi iyileştirildi (10 Puan)
+  - BUG FIX - Blend Tree ve karakter animasyon sistemleri iyileştirildi (10 Puan)
+
+*120/150 PUAN ALINDI*
+
+- **2. Sprint Notu:**
+  - Oyunun oynanabilir bir Level'ını tasarlayarak bir "vertical slice" örneği oluşturulması ve test edilmesi için çalışılmıştır.
+
+- **Sprint Retrospective:**
+  - Combat, Enemy, Level Design görevleri bölüştürülmüştür.
+  - Kart mekaniklerinin ve farklı class'ların oynanışları konuşulup kararlaştırılmıştır.
+  - Takım üyelerinin gelecek sprintlerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
+
+
+
+---
