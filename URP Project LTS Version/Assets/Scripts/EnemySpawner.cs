@@ -1,16 +1,26 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class EnemySpawner : MonoBehaviour
 {
 
-    public GameObject[] enemies;
-    int enemyNo;
+    public GameObject theEnemy;
+    public int xPos1;
+    public int zPos1;
+    public int xPos2;
+    public int zPos2;
+    public int xPos3;
+    public int zPos3;
+    public int xPos4;
+    public int zPos4;
+    public int enemyCount;
+
     public float maxPos = 2.5f;
     public float spawnInterval = 3f;
     public float currentSpawnTime = 0;
 
-    public float bigCountdown = 120; // 120 seconds is 2 minutes
+    public float bigCountdown = 120;
     public float currentBigTime = 0;
 
     void Start()
@@ -25,22 +35,36 @@ public class EnemySpawner : MonoBehaviour
 
         if (currentSpawnTime >= spawnInterval)
         {
-            spawn();
+            StartCoroutine(EnemyDrop());
             currentSpawnTime = 0;
         }
 
-        if (currentBigTime >= bigCountdown)
+        if (currentBigTime >= bigCountdown && spawnInterval > 1.5f)
         {
             spawnInterval -= .1f;
             currentBigTime = 0;
         }
     }
 
-    void spawn()
+    IEnumerator EnemyDrop()
     {
-        Vector3 enemyPos = new Vector3(Random.Range(-2.8f, 2.8f), transform.position.y, transform.position.z);
-        enemyNo = Random.Range(0, 27);
-        Instantiate(enemies[enemyNo], enemyPos, transform.rotation);
+        while( enemyCount < 10)
+        {
+            xPos1 = UnityEngine.Random.Range(-42, 42);
+            zPos1 = UnityEngine.Random.Range(-40, -42);
+            xPos2 = UnityEngine.Random.Range(-40, -42);
+            zPos2 = UnityEngine.Random.Range(-42, 42);
+            xPos3 = UnityEngine.Random.Range(-42, 42);
+            zPos3 = UnityEngine.Random.Range(40, 42);
+            xPos4 = UnityEngine.Random.Range(40, 42);
+            zPos4 = UnityEngine.Random.Range(-42, 42);
+            Instantiate(theEnemy, new Vector3(xPos1, 0, zPos1), Quaternion.identity);
+            Instantiate(theEnemy, new Vector3(xPos2, 0, zPos2), Quaternion.identity);
+            Instantiate(theEnemy, new Vector3(xPos3, 0, zPos3), Quaternion.identity);
+            Instantiate(theEnemy, new Vector3(xPos4, 0, zPos4), Quaternion.identity);
+            yield return new WaitForSeconds(3f);
+            enemyCount += 1;
+        }
     }
 }
 
