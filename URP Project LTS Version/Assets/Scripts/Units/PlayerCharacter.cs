@@ -11,6 +11,7 @@ public class PlayerCharacter : ABaseCharacter//, IAreaAbility, IHealingAbility
 {
     public DenemeAbility bloodMagicData;
     public DenemeAbility2 staticAbility;
+    public DenemeAbility3 DenemeAbility3;
 
     void Start()
     {
@@ -33,12 +34,20 @@ public class PlayerCharacter : ABaseCharacter//, IAreaAbility, IHealingAbility
         }
         //MoveArea(_dummyArea);
 
+        /*
         if (bloodMagicData.canMove)
         {
             bloodMagicData.MoveArea(bloodMagicData._dummyArea);
             Debug.Log("Ray çalýþýyor2");
         }
+        */
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            DenemeAbility3.TriggerAbility();
+
+        }
         
+
     }
 
 }

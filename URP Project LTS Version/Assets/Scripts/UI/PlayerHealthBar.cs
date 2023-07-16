@@ -31,7 +31,7 @@ public class PlayerHealthBar : ABaseHealthBar
     {
 
         SetMaxHealth(characterMaxHealth.maxHealth, healthbar);
-        SetHealth(characterHealth.currentHealth, healthbar);
+        SetHealth(characterInfo.currentHealth, healthbar);
         DamagedHealthColor = DamagedHealth.color;
         tempDamagedHealthColor = DamagedHealthColor;
         DamagedHealthColor.a = 0;
@@ -65,13 +65,20 @@ public class PlayerHealthBar : ABaseHealthBar
         damagedHealthShrinkTimer = damageShrinkTimerMax;
         autoHealTimer = autoHealTimerConst;
         takedDamage = false;
+        UpdateCurrentHealthAndBarText(healthText, healthbar, characterInfo);
         isActiveAutoHealing = false;
+        /*
+
         healthText.text = BarValueAsIntegerDisplay(healthbar);
+        */
+        UpdateCurrentHealthWithBarText(healthText.text, characterInfo);
+        //int.TryParse(healthText.text, out characterInfo.currentHealth);
         //DamageBarEffect();
         //Debug.Log("Çalýþýyor");
 
 
     }
+
 
     private void OnDisable()
     {
@@ -84,7 +91,7 @@ public class PlayerHealthBar : ABaseHealthBar
         {
             autoHealTimer -= Time.deltaTime * autoHealTimerMultiplier;
             autoHealTimerSlider.value = autoHealTimer;
-            autoHealTimerText.text = Mathf.CeilToInt(autoHealTimer % autoHealTimerDivede).ToString();
+            autoHealTimerText.text = BarValueAsIntegerDisplay(autoHealTimer % autoHealTimerDivede);
             //Debug.Log(autoHealTimer % autoHealTimerDivede);
         }
         else if (autoHealTimer <= 0 && !takedDamage)
@@ -93,7 +100,11 @@ public class PlayerHealthBar : ABaseHealthBar
             float tempvalue = healthbar.value + Time.deltaTime * autoHealSpeed;
             healthbar.value += Time.deltaTime * autoHealSpeed;
             //Debug.Log(healthbar.value);
+            UpdateCurrentHealthAndBarText(healthText, healthbar, characterInfo);
+            /*
             healthText.text = BarValueAsIntegerDisplay(healthbar);
+            UpdateCurrentHealthWithBarText(healthText.text, characterInfo);
+            */
             DamagedHealth.rectTransform.anchorMax = healthbar.fillRect.anchorMax;
         }
 

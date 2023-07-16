@@ -23,15 +23,15 @@ public abstract class ABaseCharacter : MonoBehaviour
 
     public float Damage(float characterAttackDamage, float baseAbilityDamage, float abilityDamageRatio, float highestBuffMultiplier = 0.0f, float highestDebuffMultiplier = 0.0f, float abilityDamageReduceRatio = 0.0f, float damageReduceOrPlus=0.0f)
     {
-        return (characterAttackDamage + (baseAbilityDamage * (1 + (abilityDamageRatio / 100) * (1 - (abilityDamageReduceRatio / 100))))) * (1 + highestBuffMultiplier / 100) * (1 - highestDebuffMultiplier / 100) - damageReduceOrPlus + Random.Range(-5.0f,5.0f);
+        return (characterAttackDamage + (baseAbilityDamage * (1 + (abilityDamageRatio / 100) * (1 - (abilityDamageReduceRatio / 100))))) * (1 + highestBuffMultiplier / 100) * (1 - highestDebuffMultiplier / 100) - damageReduceOrPlus + Random.Range(0,5.0f);
     }
     public float Damage(float characterAttackDamage, float abilityDamageRatio, float highestBuffMultiplier = 0.0f, float highestDebuffMultiplier = 0.0f, float abilityDamageReduceRatio = 0.0f, float damageReduceOrPlus = 0.0f)
     {
-        return (characterAttackDamage * (1 + (abilityDamageRatio / 100) * (1 - (abilityDamageReduceRatio / 100)))) * (1 + highestBuffMultiplier / 100) * (1 - highestDebuffMultiplier / 100) - damageReduceOrPlus + Random.Range(-5.0f, 5.0f);
+        return (characterAttackDamage * (1 + (abilityDamageRatio / 100) * (1 - (abilityDamageReduceRatio / 100)))) * (1 + highestBuffMultiplier / 100) * (1 - highestDebuffMultiplier / 100) - damageReduceOrPlus + Random.Range(0.0f, 5.0f);
     }
     public float Damage(float characterAttackDamage, float highestBuffMultiplier = 0.0f, float highestDebuffMultiplier=0.0f, float damageReduceOrPlus = 0.0f)
     {
-        return characterAttackDamage * (1 + highestBuffMultiplier / 100) * (1 - highestDebuffMultiplier / 100) - damageReduceOrPlus + Random.Range(-5.0f, 5.0f);
+        return characterAttackDamage * (1 + highestBuffMultiplier / 100) * (1 - highestDebuffMultiplier / 100) - damageReduceOrPlus + Random.Range(0.0f, 5.0f);
     }
 
     /// <summary>
@@ -50,6 +50,7 @@ public abstract class ABaseCharacter : MonoBehaviour
         }
         else
         {
+            isCritic= false;
             return calculatedDamage;
         }
 

@@ -9,28 +9,52 @@ public class EnemyHealthBar : ABaseHealthBar
 {
     public TextMeshProUGUI levelText;
     public Transform cameraTransform;
-    public Quaternion quaternion;
-    Vector3 point;
+    public Quaternion textCameraLookQuaternion;
+    Vector3 barLookDirection;
+    [SerializeField] private DissolveController_Deneme dissolve;
+
     // Start is called before the first frame update
     void Start()
     {
         SetMaxHealth(characterMaxHealth.maxHealth, healthbar);
-        SetHealth(characterHealth.currentHealth, healthbar);
+        SetHealth(characterInfo.currentHealth, healthbar);
         healthText.text = BarValueAsIntegerDisplay(healthbar);
-        levelText.text = $"Level {characterHealth.Level}";
+        levelText.text = $"Level {characterInfo.Level}";
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void LateUpdate()
     {
-        point = gameObject.transform.position - cameraTransform.position;
-        quaternion = Quaternion.LookRotation(point);
-        gameObject.transform.parent.rotation = quaternion;
+        barLookDirection = gameObject.transform.position - cameraTransform.position;
+        textCameraLookQuaternion = Quaternion.LookRotation(barLookDirection);
+        gameObject.transform.parent.rotation = textCameraLookQuaternion;
 
+    }
+    private void OnEnable()
+    {
+        OnDamaged += EnemyHealthBar_OnDamaged;
+    }
+
+
+    private void OnDisable()
+    {
+        OnDamaged -= EnemyHealthBar_OnDamaged;
+    }
+
+    private void EnemyHealthBar_OnDamaged(object sender, System.EventArgs e)
+    {
+        Debug.Log("enemy deneme2");
+        UpdateCurrentHealthAndBarText(healthText, healthbar, characterInfo);
+        if (characterInfo.currentHealth <=0 )
+        {
+            dissolve = characterInfo.gameObject.GetComponent<DissolveController_Deneme>();
+            StartCoroutine(dissolve.Dissolve_Deneme());
+            //dissolve.gameObject.SetActive(false);
+        }
     }
 }
