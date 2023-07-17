@@ -16,7 +16,7 @@ MonoBehaviour:
   characterIndex: 1
   characterCount: 0
   characterType: 0
-  maxHealth: 1000
+  maxHealth: 500
   maxLifeStealRatio: 0
   maxArmor: 250
   maxMovementSpeed: 10
