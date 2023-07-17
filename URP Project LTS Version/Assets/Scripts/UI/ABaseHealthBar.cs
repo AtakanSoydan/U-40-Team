@@ -1,14 +1,16 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Profiling;
 using UnityEngine.UI;
 
 public abstract class ABaseHealthBar : MonoBehaviour, IDamage
 {
 
-    public ABaseCharacter characterHealth;
+    public ABaseCharacter characterInfo;
     public ABaseCharacterData characterMaxHealth;
     //public float changeSpeed;
     //public float lerpTime;
@@ -18,13 +20,18 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
     public TextMeshProUGUI healthText;
     public float damage;
     public float health;
+    public bool wasCritic;
     //public float maximumHealth = 1000;
 
     public event EventHandler OnDamaged;
+    DamageDisplayEventArgs damageDisplayEventArgs;
 
     public bool takedDamage = false;
 
-
+    private void Start()
+    {
+        damageDisplayEventArgs = new DamageDisplayEventArgs(damage);
+    }
     /// <summary>
     /// Verilerin belli aralýktan baþka aralýðý taþýnmasýnda kullanýlan metottur
     /// </summary>
@@ -62,22 +69,34 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
     /// Hasarýn uygulandýðý sýnýf
     /// </summary>
     /// <param name="amount">Hesaplanmýþ hasar miktarý. Bu hasar miktarý kadar can azalacak</param>
-    public void Damage(float amount)
+    public void DamageApply(float amount, bool isCritic=false)
     {
-        //Debug.Log("damage");
-        healthbar.value -= amount;
-        takedDamage = true;
-        if (health < 0)
+        if (characterInfo.currentHealth >0)
         {
-            health = 0;
+
+
+            //Debug.Log("damage");
+            healthbar.value -= amount;
+            wasCritic = isCritic;
+            takedDamage = true;
+            if (health < 0)
+            {
+                health = 0;
+            }
+
+            if (OnDamaged != null)
+            {
+                damage = amount;
+                //damageDisplayEventArgs.DamageAmount = amount;
+                OnDamaged(this, System.EventArgs.Empty);
+
+            }
+
+            takedDamage = false;
+
+
         }
 
-        if (OnDamaged != null)
-        {
-            OnDamaged(this, EventArgs.Empty);
-
-        }
-        takedDamage = false;
     }
     /*
     public void Heal(float amount)
@@ -106,7 +125,31 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
         return Mathf.CeilToInt(value).ToString();
     }
 
+    public void UpdateCurrentHealthWithBarText(TextMeshProUGUI healthbar, ABaseCharacter characterHealth)
+    {
+        int.TryParse(healthbar.text, out characterHealth.currentHealth);
+        //int.TryParse(healthText.text, out characterInfo.currentHealth);
+    }
+
+    public void UpdateCurrentHealthWithBarText(string healthbar, ABaseCharacter characterHealth)
+    {
+        int.TryParse(healthbar, out characterHealth.currentHealth);
+    }
+
+    public int BarValueAsIntegerDisplay(Slider healthbar, TextMeshProUGUI healthText)
+    {
+        int a = Mathf.CeilToInt(healthbar.value);
+        healthText.SetText(a.ToString());
+        return a;
+    }
+    public void UpdateCurrentHealthAndBarText(TextMeshProUGUI healthText, Slider healthbar, ABaseCharacter characterHealth)
+    {
+        healthText.text = BarValueAsIntegerDisplay(healthbar);
+        UpdateCurrentHealthWithBarText(healthText.text, characterHealth);
+    }
+
     //TODO bunu kaldýrabilirim  Abasecharacter'da bir tane daha var
+
     /// <summary>
     ///     Ýyileþme miktarýný hesaplamak için kullanýlan metottur.
     /// </summary>
@@ -122,4 +165,5 @@ public abstract class ABaseHealthBar : MonoBehaviour, IDamage
         float healthfill = targetHealImage.value;
         return healthfill + (rawHealing * (1 + healingRatio / 100) * (1 - healigMultiplier / 100));
     }
+
 }
