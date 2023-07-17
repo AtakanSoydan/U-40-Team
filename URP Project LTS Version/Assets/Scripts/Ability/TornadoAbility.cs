@@ -5,13 +5,14 @@ using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.VFX;
 
-public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, IHealAbilityy, IMoveAbleArea
+public class TornadoAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, IHealAbilityy, IMoveAbleArea
 {
     [Header("BloodMagicData")]
     //public float maxRate = 1.0f;
     public float healRate = 0.4f;
     public GameObject healingTarget;
     public VisualEffect vfx;
+    public GameObject vfxParentObject;
 
 
     [SerializeField] private float areaRadius = 21.0f;
@@ -31,10 +32,10 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
     public float HealRate { get => healRate; set => healRate = value; }
 
     public float AreaRadius { get => areaRadius; set => areaRadius = value; }
-    public bool CanMove { get=>canMove; set=> canMove=value; }
-    public RaycastHit[] HitInfo { get=> hitInfo; set { hitInfo = value; } }
-    public Ray Ray { get=> ray; set=> ray=value; }
-    public Camera ActiveCamera { get=> activeCamera; set=> activeCamera=value; }
+    public bool CanMove { get => canMove; set => canMove = value; }
+    public RaycastHit[] HitInfo { get => hitInfo; set { hitInfo = value; } }
+    public Ray Ray { get => ray; set => ray = value; }
+    public Camera ActiveCamera { get => activeCamera; set => activeCamera = value; }
     public Collider[] SearchedArea
     {
         get => searchedArea;
@@ -43,8 +44,9 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
             searchedArea = value;
         }
     }
-    public int LayerMasktoSearch { 
-        get => layerMasktoSearch; 
+    public int LayerMasktoSearch
+    {
+        get => layerMasktoSearch;
         set { layerMasktoSearch = value; }
     }
 
@@ -81,7 +83,9 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
     {
         isAbilityActive = true;
         searchedArea = new Collider[maxSearchedColliderCount];
-        vfx = GetComponentInChildren<VisualEffect>();
+        //vfx = GetComponentInChildren<VisualEffect>();
+        vfxParentObject = vfx.transform.parent.gameObject;
+        vfxParentObject.SetActive(false);
 
         colliders = new Collider[10];
         hitInfo = new RaycastHit[10];
@@ -99,6 +103,8 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
             MoveArea(_dummyArea);
         }*/
         MoveArea(_dummyArea);
+
+        //Debug.Log("radius: " + vfx.GetFloat("Radius"));
     }
     /*
     private void LateUpdate()
@@ -207,7 +213,7 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
     {
         if (isAbilityActive)
         {
-            denemeAbilityCor= StartCoroutine(UseAbility(firstAbilityDelay, abilityCooldown, abilityDamage));
+            denemeAbilityCor = StartCoroutine(UseAbility(firstAbilityDelay, abilityCooldown, abilityDamage));
         }
     }
 
@@ -225,7 +231,7 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
             isActiveted = false;
             isAbilityActive = false;
             canMove = true;
-            canceled= false;
+            canceled = false;
             showDuration = 50.0f;
             yield return new WaitForSeconds(firstAbilityDelay);
             canCancelTime = true;
@@ -252,6 +258,11 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
             }
             canMove = false;
             float tempContinuousAbilityRepetitions = ContinuousAbilityRepetitions;
+            vfxParentObject.transform.SetPositionAndRotation(_gameObject.transform.position, Quaternion.identity);
+            vfx.SetFloat("Size", AreaRadius/8);
+            vfx.SetFloat("TornadoLifeTime", tempContinuousAbilityRepetitions * ContinuousAbilityDuration);
+            //Debug.Log(vfx.GetFloat("TornadoLifeTime"));
+            vfxParentObject.SetActive(true);
             if (HealingEnabled)
             {
                 while (tempContinuousAbilityRepetitions > 0)
@@ -317,7 +328,7 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
                 _dummyArea.SetActive(false);
             }
             tempContinuousAbilityRepetitions = ContinuousAbilityRepetitions;
-
+            vfxParentObject.SetActive(false);
 
             yield return new WaitForSeconds(abilityCooldown);
         }
@@ -327,3 +338,4 @@ public class DenemeAbility : AMagicAbility, IAreaAbilityy, IContinousAbilityy, I
 
 
 }
+

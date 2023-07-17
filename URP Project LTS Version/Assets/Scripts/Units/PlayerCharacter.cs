@@ -12,6 +12,8 @@ public class PlayerCharacter : ABaseCharacter//, IAreaAbility, IHealingAbility
     public DenemeAbility bloodMagicData;
     public DenemeAbility2 staticAbility;
     public DenemeAbility3 DenemeAbility3;
+    public ArrowRain arrowRain;
+    public TornadoAbility tornadoAbility;
 
     void Start()
     {
@@ -24,12 +26,12 @@ public class PlayerCharacter : ABaseCharacter//, IAreaAbility, IHealingAbility
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            bloodMagicData.TriggerAbility();
+            arrowRain.TriggerAbility();
 
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            staticAbility.TriggerAbility();
+            tornadoAbility.TriggerAbility();
 
         }
         //MoveArea(_dummyArea);
