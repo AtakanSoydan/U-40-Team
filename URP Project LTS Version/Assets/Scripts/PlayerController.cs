@@ -23,16 +23,37 @@ public class PlayerController : MonoBehaviour
     float forwardAmount;
     float turnAmount;
 
+    public float dashSpeed;
+    public float moveSpeed2;
+    public bool dashing = false;
+
+
     private void Awake()
     {
+        Matrix4x4 mat = _camera.projectionMatrix;
+        mat[1, 1] = Mathf.Sqrt(2) / _camera.orthographicSize;
+        _camera.projectionMatrix = mat;
+
+        moveSpeed2 = moveSpeed;
+
         _input = GetComponent<InputHandler>();
         SetupAnimator();
 
         cam = Camera.main.transform;
+
     }
 
     void Update()
     {
+        if (dashing == true)
+        {
+            moveSpeed = dashSpeed;
+        }
+        else
+        {
+            moveSpeed = moveSpeed2;
+        }
+
         var targetVector = new Vector3(_input.InputVector.x, 0, _input.InputVector.y);
 
         var movementVector = MoveTowardTarget(targetVector);
@@ -44,7 +65,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(cam != null)
+        if (cam != null)
         {
             camForward = Vector3.Scale(cam.up, new Vector3(1, 0, 1).normalized);
             move = _input.v * camForward + _input.h * cam.right;
@@ -62,8 +83,8 @@ public class PlayerController : MonoBehaviour
     }
 
     void Move(Vector3 move)
-    { 
-        if(move.magnitude < 1)
+    {
+        if (move.magnitude < 1)
         {
             move.Normalize();
         }
@@ -89,9 +110,9 @@ public class PlayerController : MonoBehaviour
 
     private void rotateTowardsMouseVector()
     {
-        Ray ray =_camera.ScreenPointToRay(_input.MousePosition);
+        Ray ray = _camera.ScreenPointToRay(_input.MousePosition);
 
-        if(Physics.Raycast(ray, out RaycastHit hitInfo, maxDistance: 300f))
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, maxDistance: 300f))
         {
             var target = hitInfo.point;
             target.y = transform.position.y;
@@ -103,7 +124,7 @@ public class PlayerController : MonoBehaviour
 
     private void RotateTowardMovementVector(Vector3 movementVector)
     {
-        if(movementVector.magnitude == 0) { return; }
+        if (movementVector.magnitude == 0) { return; }
         var rotation = Quaternion.LookRotation(movementVector);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, rotateSpeed);
     }
@@ -126,7 +147,7 @@ public class PlayerController : MonoBehaviour
 
         foreach (var childAnimator in GetComponentsInChildren<Animator>())
         {
-            if(childAnimator != anim)
+            if (childAnimator != anim)
             {
                 anim.avatar = childAnimator.avatar;
                 Destroy(childAnimator);
