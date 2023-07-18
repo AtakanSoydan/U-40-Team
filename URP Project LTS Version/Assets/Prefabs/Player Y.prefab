@@ -134,11 +134,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95527ac8b9dd9a74794bece291782288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 8350163538442046528}
   moveSpeed: 4
   rotateSpeed: 15
   rotateTowardsMouse: 1
   _camera: {fileID: 0}
+  dashSpeed: 10
+  dashDuration: 1
+  dashCooldown: 1
+  rb: {fileID: 8898715742007599719}
 --- !u!1001 &2489128121836597713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -215,6 +219,12 @@ PrefabInstance:
 --- !u!4 &2666572621230642746 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 388a9cbbe94e70841b5818257320da81,
+    type: 3}
+  m_PrefabInstance: {fileID: 2489128121836597713}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8350163538442046528 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 388a9cbbe94e70841b5818257320da81,
     type: 3}
   m_PrefabInstance: {fileID: 2489128121836597713}
   m_PrefabAsset: {fileID: 0}
