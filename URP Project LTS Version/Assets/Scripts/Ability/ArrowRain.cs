@@ -328,9 +328,9 @@ public class ArrowRain : AMagicAbility, IAreaAbilityy, IContinousAbilityy, IHeal
                 _dummyArea.SetActive(false);
             }
             tempContinuousAbilityRepetitions = ContinuousAbilityRepetitions;
-            vfxParentObject.SetActive(false);
 
             yield return new WaitForSeconds(abilityCooldown);
+            vfxParentObject.SetActive(false);
         }
         isActiveted = true;
         isAbilityActive = true;
